@@ -72,6 +72,7 @@
 % ── Code Blocks ──────────────────────────────────────────────────
 \usepackage{fancyvrb}           % required by Pandoc highlighting macros
 \usepackage{framed}
+\usepackage[most]{tcolorbox}
 \usepackage{listings}
 
 % Pandoc injects Shaded/Highlighting environments + token commands via this variable
@@ -117,20 +118,23 @@ $highlighting-macros$
 \@ifundefined{NormalTok}{}{\renewcommand{\NormalTok}[1]{\textcolor[HTML]{D8DEE9}{#1}}}
 \makeatother
 
-% Ensure Shaded environment always provides the grey background
+% Styled code block: dark background, padding, rounded corners
+\newtcolorbox{pctcodebox}{
+  colback=shadecolor,
+  colframe=shadecolor,
+  arc=4pt,
+  boxrule=0pt,
+  left=8pt,
+  right=8pt,
+  top=6pt,
+  bottom=6pt,
+  breakable
+}
 \makeatletter
 \@ifundefined{Shaded}{%
-  \newenvironment{Shaded}{%
-    \begin{snugshade}%
-  }{%
-    \end{snugshade}%
-  }%
-}{% Shaded exists — redefine to guarantee background
-  \renewenvironment{Shaded}{%
-    \begin{snugshade}%
-  }{%
-    \end{snugshade}%
-  }%
+  \newenvironment{Shaded}{\begin{pctcodebox}}{\end{pctcodebox}}%
+}{%
+  \renewenvironment{Shaded}{\begin{pctcodebox}}{\end{pctcodebox}}%
 }
 \makeatother
 \lstset{
