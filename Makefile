@@ -7,7 +7,8 @@ OUTPUT  ?= pct-spec-$(VERSION).pdf
 pdf: $(OUTPUT)
 
 $(OUTPUT): SPEC.md .github/spec-pdf/template.tex
-	pandoc SPEC.md \
+	sed '/^## Table of Contents$$/,/^---$$/{d;}' SPEC.md | \
+	pandoc -f markdown \
 		--template=.github/spec-pdf/template.tex \
 		--pdf-engine=pdflatex \
 		--highlight-style=tango \
