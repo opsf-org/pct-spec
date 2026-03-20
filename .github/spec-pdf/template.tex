@@ -18,8 +18,10 @@
 
 % ── Colours ──────────────────────────────────────────────────────
 \usepackage[dvipsnames,svgnames]{xcolor}
-\definecolor{pctblue}{HTML}{1A3A5C}
-\definecolor{pctaccent}{HTML}{2B7A78}
+\definecolor{pctnavy}{HTML}{1A2744}
+\definecolor{pctgold}{HTML}{D4A742}
+\definecolor{pctblue}{HTML}{1A2744}       % alias for headings
+\definecolor{pctaccent}{HTML}{D4A742}     % accent = brand gold
 \definecolor{pctgray}{HTML}{4A4A4A}
 \definecolor{codebg}{HTML}{F5F5F5}
 \definecolor{rulecolor}{HTML}{CCCCCC}
@@ -38,6 +40,7 @@
 \fancyfoot[L]{\footnotesize\color{pctgray}\textcopyright\ 2026 DPG Labs. CC BY 4.0}
 \fancyfoot[C]{\small\color{pctgray}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{pctgold}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrulewidth}{0pt}
 
 % ── Section Styling ──────────────────────────────────────────────
@@ -136,13 +139,20 @@ $endif$
 % ── Custom Title Page ────────────────────────────────────────────
 \thispagestyle{empty}
 \begin{center}
-  \vspace*{2cm}
+  \vspace*{1cm}
 
-  {\color{pctaccent}\rule{\textwidth}{1.2pt}}
+  % Logo — place logo.png in .github/spec-pdf/ to enable
+  \IfFileExists{logo.png}{%
+    \includegraphics[width=2.5cm]{logo.png}\\[1cm]
+  }{%
+    \vspace{1cm}
+  }
 
-  \vspace{1.5cm}
+  {\color{pctgold}\rule{\textwidth}{1.5pt}}
 
-  {\Huge\bfseries\color{pctblue} Privacy Claims Token (PCT)}
+  \vspace{1.2cm}
+
+  {\Huge\bfseries\color{pctnavy} Privacy Claims Token (PCT)}
 
   \vspace{0.5cm}
 
@@ -150,21 +160,21 @@ $endif$
 
   \vspace{1cm}
 
-  {\large\color{pctaccent}\bfseries $if(version)$$version$$else$Version 0.1$endif$ · Draft for Public Comment}
+  {\large\color{pctgold}\bfseries $if(version)$$version$$else$Version 0.1$endif$ · Draft for Public Comment}
 
   \vspace{0.8cm}
 
   {\normalsize\color{pctgray} $if(date)$$date$$else$March 2026$endif$}
 
-  \vspace{1.5cm}
+  \vspace{1.2cm}
 
-  {\color{pctaccent}\rule{\textwidth}{1.2pt}}
+  {\color{pctgold}\rule{\textwidth}{1.5pt}}
 
   \vspace{2cm}
 
-  {\normalsize\color{pctgray}
-    DPG Labs · The DPG\\[0.3em]
-    \href{https://dpglabs.io}{dpglabs.io}
+  {\normalsize\color{pctnavy}
+    \textbf{DPG Labs} · The DPG\\[0.3em]
+    \href{https://dpglabs.io}{\color{pctgold}dpglabs.io}
   }
 
   \vspace{1.5cm}
