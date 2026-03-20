@@ -60,7 +60,12 @@
 \titlespacing*{\subsubsection}{0pt}{1em}{0.3em}
 
 % ── Code Blocks ──────────────────────────────────────────────────
+\usepackage{framed}
 \usepackage{listings}
+
+% Pandoc emits Shaded + Highlighting environments for fenced code blocks
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\definecolor{shadecolor}{HTML}{F5F5F5}
 \lstset{
   basicstyle=\small\ttfamily\color{pctgray},
   backgroundcolor=\color{codebg},
