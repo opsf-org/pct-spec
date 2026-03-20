@@ -11,6 +11,7 @@ $(OUTPUT): SPEC.md .github/spec-pdf/template.tex
 	pandoc -f markdown \
 		--template=.github/spec-pdf/template.tex \
 		--pdf-engine=pdflatex \
+		--shift-heading-level-by=-1 \
 		--highlight-style=tango \
 		--toc \
 		--toc-depth=3 \
