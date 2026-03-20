@@ -40,7 +40,6 @@ function Table(tbl)
   add('\\begin{longtable}[]{@{}' .. table.concat(cols, '') .. '@{}}')
 
   -- ── Header ──────────────────────────────────────────────
-  add('\\arrayrulecolor{pctnavy}\\toprule')
   if #tbl.head.rows > 0 then
     for _, row in ipairs(tbl.head.rows) do
       local cells = {}
@@ -50,7 +49,6 @@ function Table(tbl)
       end
       add('\\rowcolor{pctnavy} ' .. table.concat(cells, ' & ') .. ' \\\\')
     end
-    add('\\midrule')
     add('\\endhead')
     -- Repeated footer for page breaks inside long tables
     add('\\arrayrulecolor{pctnavy}\\bottomrule')
