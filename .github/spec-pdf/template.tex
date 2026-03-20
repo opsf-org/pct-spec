@@ -60,12 +60,14 @@
 \titlespacing*{\subsubsection}{0pt}{1em}{0.3em}
 
 % ── Code Blocks ──────────────────────────────────────────────────
+\usepackage{fancyvrb}           % required by Pandoc highlighting macros
 \usepackage{framed}
 \usepackage{listings}
 
-% Pandoc emits Shaded + Highlighting environments for fenced code blocks
+% Pandoc injects Shaded/Highlighting environments + token commands via this variable
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \definecolor{shadecolor}{HTML}{F5F5F5}
+$highlighting-macros$
 \lstset{
   basicstyle=\small\ttfamily\color{pctgray},
   backgroundcolor=\color{codebg},
