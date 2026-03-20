@@ -28,6 +28,7 @@
 
 % ── Typography ───────────────────────────────────────────────────
 \usepackage{microtype}
+\usepackage{etoolbox}             % for \pretocmd
 \usepackage{parskip}              % space between paragraphs, no indent
 \setlength{\parskip}{0.5em}
 
@@ -48,12 +49,13 @@
 
 \setcounter{secnumdepth}{0}       % headings already have manual numbers
 
-\newcommand{\sectionbreak}{\clearpage}
-
 \titleformat{\section}
   {\Large\bfseries\color{pctblue}}
   {}{0pt}{}
   [\vspace{-0.4em}{\color{pctaccent}\rule{\textwidth}{0.8pt}}]
+
+% Force a page break before every \section (after titlesec has redefined it)
+\pretocmd{\section}{\clearpage}{}{}
 
 \titleformat{\subsection}
   {\large\bfseries\color{pctblue}}
