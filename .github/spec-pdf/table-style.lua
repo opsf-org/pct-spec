@@ -79,7 +79,6 @@ function Table(tbl)
     end
   end
 
-  add('\\arrayrulecolor{pctnavy}\\bottomrule')
   add('\\end{longtable}')
   add('\\end{small}')
 
