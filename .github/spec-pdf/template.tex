@@ -75,8 +75,11 @@
 \usepackage{listings}
 
 % Pandoc injects Shaded/Highlighting environments + token commands via this variable
-\definecolor{shadecolor}{HTML}{1A2744}
 $highlighting-macros$
+
+% Dark background for code blocks — must come AFTER highlighting-macros
+% since pandoc redefines shadecolor
+\definecolor{shadecolor}{HTML}{1A2744}
 
 % Smaller font for code blocks + light text on dark background
 \fvset{fontsize=\scriptsize}
