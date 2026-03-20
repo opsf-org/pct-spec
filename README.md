@@ -137,7 +137,7 @@ This is a draft for public comment. Contributions of all kinds are welcome:
 
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for details, or open an issue.
 
-**Comment by email:** pct-spec@thedpg.com
+**Comment by email:** pct@dpglabs.io
 
 ---
 
@@ -151,9 +151,9 @@ Anyone may implement, extend, or build upon it freely, provided attribution is g
 
 ## Authors
 
-**DPG Labs · The Data Privacy Group**
+**DPG Labs · The DPG**
 
-[thedpg.com](https://thedpg.com)
+[dpglabs.io](https://dpglabs.io)
 
 ---
 

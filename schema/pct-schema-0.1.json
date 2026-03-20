@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://pct.thedpg.com/schema/0.1/pct.json",
+  "$id": "https://pct.dpglabs.io/schema/0.1/pct.json",
   "title": "Privacy Claims Token",
   "description": "JSON Schema for PCT payload validation — Privacy Claims Token Specification v0.1",
   "type": "object",
