@@ -98,6 +98,9 @@
 % ── Lists ────────────────────────────────────────────────────────
 \usepackage{enumitem}
 \setlist{nosep, leftmargin=1.5em}
+
+% Pandoc emits \tightlist for compact lists
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlist[itemize,1]{label={\color{pctaccent}\textbullet}}
 \setlist[itemize,2]{label={\color{pctaccent}--}}
 
