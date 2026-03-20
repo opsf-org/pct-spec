@@ -9,6 +9,15 @@ end
 
 local function render_blocks(blocks)
   local s = pandoc.write(pandoc.Pandoc(blocks), 'latex')
+  -- Allow line breaks in monospace text at _ . : characters
+  -- \texttt{foo_bar} → \texttt{foo\allowbreak\_\allowbreak bar}
+  s = s:gsub('\\texttt{([^}]*)}', function(inner)
+    local broken = inner
+      :gsub('_', '\\allowbreak{}\\_\\allowbreak{}')
+      :gsub('%.', '\\allowbreak{}.\\allowbreak{}')
+      :gsub(':', '\\allowbreak{}:\\allowbreak{}')
+    return '\\texttt{' .. broken .. '}'
+  end)
   return (s:gsub('%s+$', ''))
 end
 
@@ -37,7 +46,7 @@ function Table(tbl)
   local out = {}
   local function add(s) table.insert(out, s) end
 
-  add('\\begin{small}')
+  add('\\begin{footnotesize}')
   add('\\begin{longtable}[]{@{}' .. table.concat(cols, '') .. '@{}}')
 
   -- ── Header ──────────────────────────────────────────────
@@ -79,7 +88,7 @@ function Table(tbl)
   end
 
   add('\\end{longtable}')
-  add('\\end{small}')
+  add('\\end{footnotesize}')
 
   return pandoc.RawBlock('latex', table.concat(out, '\n'))
 end
