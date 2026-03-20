@@ -7,17 +7,25 @@ local function render_inlines(inlines)
   return (s:gsub('%s+$', ''))
 end
 
+-- Replace Code inlines with breakable raw LaTeX equivalents
+local function make_code_breakable(blocks)
+  return pandoc.walk_block(
+    pandoc.Div(blocks),
+    { Code = function(el)
+        -- Insert \hspace{0pt} at _ . : to allow line breaks
+        local s = el.text
+          :gsub('_', '\\hspace{0pt}_\\hspace{0pt}')
+          :gsub('%.', '\\hspace{0pt}.\\hspace{0pt}')
+          :gsub(':', '\\hspace{0pt}:\\hspace{0pt}')
+        return pandoc.RawInline('latex',
+          '\\texttt{' .. s .. '}')
+      end
+    }
+  ).content
+end
+
 local function render_blocks(blocks)
-  local s = pandoc.write(pandoc.Pandoc(blocks), 'latex')
-  -- Allow line breaks in monospace text at _ . : characters
-  -- \texttt{foo_bar} → \texttt{foo\allowbreak\_\allowbreak bar}
-  s = s:gsub('\\texttt{([^}]*)}', function(inner)
-    local broken = inner
-      :gsub('_', '\\allowbreak{}\\_\\allowbreak{}')
-      :gsub('%.', '\\allowbreak{}.\\allowbreak{}')
-      :gsub(':', '\\allowbreak{}:\\allowbreak{}')
-    return '\\texttt{' .. broken .. '}'
-  end)
+  local s = pandoc.write(pandoc.Pandoc(make_code_breakable(blocks)), 'latex')
   return (s:gsub('%s+$', ''))
 end
 
