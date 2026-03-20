@@ -52,7 +52,6 @@ function Table(tbl)
     end
     add('\\endhead')
     -- Repeated footer for page breaks inside long tables
-    add('\\arrayrulecolor{pctnavy}\\bottomrule')
     add('\\endlastfoot')
   end
 
