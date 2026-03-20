@@ -4,7 +4,7 @@
 
 March 2026
 
-**Specification authors:** DPG Labs · The Data Privacy Group · [dpglabs.io](https://dpglabs.io)
+**Specification authors:** DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)
 
 ---
 
@@ -714,7 +714,7 @@ The following values are defined as the standard controlled vocabulary for the `
 
 | Version | Date | Notes |
 |---------|------|-------|
-| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The Data Privacy Group. |
+| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The DPG. |
 
 ---
 

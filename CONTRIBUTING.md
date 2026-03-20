@@ -99,4 +99,4 @@ This project follows a simple standard: be respectful, be constructive, and focu
 
 ---
 
-*DPG Labs · The Data Privacy Group · [dpglabs.io](https://dpglabs.io)*
+*DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)*

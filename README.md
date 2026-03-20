@@ -151,7 +151,7 @@ Anyone may implement, extend, or build upon it freely, provided attribution is g
 
 ## Authors
 
-**DPG Labs · The Data Privacy Group**
+**DPG Labs · The DPG**
 
 [dpglabs.io](https://dpglabs.io)
 
