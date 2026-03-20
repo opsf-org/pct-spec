@@ -30,6 +30,7 @@ jobs:
           pandoc SPEC.md \
             --template=.github/spec-pdf/template.tex \
             --pdf-engine=pdflatex \
+            --shift-heading-level-by=-1 \
             --highlight-style=tango \
             --toc \
             --toc-depth=3 \
