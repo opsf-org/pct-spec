@@ -77,6 +77,12 @@
 % Pandoc injects Shaded/Highlighting environments + token commands via this variable
 \definecolor{shadecolor}{HTML}{F5F5F5}
 $highlighting-macros$
+% Fallback: ensure Shaded environment exists even if highlighting macros omit it
+\makeatletter
+\@ifundefined{Shaded}{%
+  \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}%
+}{}
+\makeatother
 \lstset{
   basicstyle=\small\ttfamily\color{pctgray},
   backgroundcolor=\color{codebg},

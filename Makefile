@@ -13,7 +13,7 @@ $(OUTPUT): SPEC.md .github/spec-pdf/template.tex
 		--pdf-engine=pdflatex \
 		--shift-heading-level-by=-1 \
 		--lua-filter=.github/spec-pdf/table-style.lua \
-		--highlight-style=tango \
+		--syntax-highlighting=tango \
 		--toc \
 		--toc-depth=3 \
 		-V version="$(VERSION)" \
