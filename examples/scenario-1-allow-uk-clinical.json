@@ -14,7 +14,7 @@
       "issued_at": 1743000000,
       "valid_from": 1743000000,
       "expires_at": 1774536000,
-      "issuer": "https://orchestrator.thedpg.com",
+      "issuer": "https://orchestrator.dpglabs.io",
       "subject_id": "dataset:patient-cohort-2026-03",
       "subject_type": "ai_interaction",
       "data_origin": "GB",
