@@ -1,3 +1,31 @@
 .DS_Store
 *.zip
 .claude/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Keys (never commit private keys)
+*.pem
+*.key
+!*.pub
