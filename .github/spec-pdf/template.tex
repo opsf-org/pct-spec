@@ -42,18 +42,20 @@
 % ── Section Styling ──────────────────────────────────────────────
 \usepackage{titlesec}
 
+\setcounter{secnumdepth}{0}       % headings already have manual numbers
+
 \titleformat{\section}
   {\Large\bfseries\color{pctblue}}
-  {\thesection}{0.8em}{}
+  {}{0pt}{}
   [\vspace{-0.4em}{\color{pctaccent}\rule{\textwidth}{0.8pt}}]
 
 \titleformat{\subsection}
   {\large\bfseries\color{pctblue}}
-  {\thesubsection}{0.7em}{}
+  {}{0pt}{}
 
 \titleformat{\subsubsection}
   {\normalsize\bfseries\color{pctblue}}
-  {\thesubsubsection}{0.6em}{}
+  {}{0pt}{}
 
 \titlespacing*{\section}{0pt}{1.5em}{0.6em}
 \titlespacing*{\subsection}{0pt}{1.2em}{0.4em}
@@ -99,7 +101,7 @@ $highlighting-macros$
   urlcolor=pctaccent,
   citecolor=pctblue,
   bookmarks=true,
-  bookmarksnumbered=true,
+  bookmarksnumbered=false,
   pdfstartview=FitH
 ]{hyperref}
 
