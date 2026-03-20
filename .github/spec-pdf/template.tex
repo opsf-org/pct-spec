@@ -75,11 +75,44 @@
 \usepackage{listings}
 
 % Pandoc injects Shaded/Highlighting environments + token commands via this variable
-\definecolor{shadecolor}{HTML}{F5F5F5}
+\definecolor{shadecolor}{HTML}{1A2744}
 $highlighting-macros$
 
-% Smaller font for code blocks
+% Smaller font for code blocks + light text on dark background
 \fvset{fontsize=\scriptsize}
+
+% Override syntax highlighting token colours for dark background
+\makeatletter
+\@ifundefined{KeywordTok}{}{\renewcommand{\KeywordTok}[1]{\textcolor[HTML]{D4A742}{\textbf{#1}}}}
+\@ifundefined{DataTypeTok}{}{\renewcommand{\DataTypeTok}[1]{\textcolor[HTML]{81A1C1}{#1}}}
+\@ifundefined{DecValTok}{}{\renewcommand{\DecValTok}[1]{\textcolor[HTML]{B48EAD}{#1}}}
+\@ifundefined{BaseNTok}{}{\renewcommand{\BaseNTok}[1]{\textcolor[HTML]{B48EAD}{#1}}}
+\@ifundefined{FloatTok}{}{\renewcommand{\FloatTok}[1]{\textcolor[HTML]{B48EAD}{#1}}}
+\@ifundefined{ConstantTok}{}{\renewcommand{\ConstantTok}[1]{\textcolor[HTML]{D08770}{#1}}}
+\@ifundefined{CharTok}{}{\renewcommand{\CharTok}[1]{\textcolor[HTML]{A3BE8C}{#1}}}
+\@ifundefined{SpecialCharTok}{}{\renewcommand{\SpecialCharTok}[1]{\textcolor[HTML]{A3BE8C}{#1}}}
+\@ifundefined{StringTok}{}{\renewcommand{\StringTok}[1]{\textcolor[HTML]{A3BE8C}{#1}}}
+\@ifundefined{VerbatimStringTok}{}{\renewcommand{\VerbatimStringTok}[1]{\textcolor[HTML]{A3BE8C}{#1}}}
+\@ifundefined{SpecialStringTok}{}{\renewcommand{\SpecialStringTok}[1]{\textcolor[HTML]{A3BE8C}{#1}}}
+\@ifundefined{ImportTok}{}{\renewcommand{\ImportTok}[1]{\textcolor[HTML]{81A1C1}{#1}}}
+\@ifundefined{CommentTok}{}{\renewcommand{\CommentTok}[1]{\textcolor[HTML]{616E88}{\textit{#1}}}}
+\@ifundefined{DocumentationTok}{}{\renewcommand{\DocumentationTok}[1]{\textcolor[HTML]{616E88}{\textit{#1}}}}
+\@ifundefined{AnnotationTok}{}{\renewcommand{\AnnotationTok}[1]{\textcolor[HTML]{D08770}{\textit{#1}}}}
+\@ifundefined{FunctionTok}{}{\renewcommand{\FunctionTok}[1]{\textcolor[HTML]{88C0D0}{#1}}}
+\@ifundefined{VariableTok}{}{\renewcommand{\VariableTok}[1]{\textcolor[HTML]{D8DEE9}{#1}}}
+\@ifundefined{ControlFlowTok}{}{\renewcommand{\ControlFlowTok}[1]{\textcolor[HTML]{D4A742}{\textbf{#1}}}}
+\@ifundefined{OperatorTok}{}{\renewcommand{\OperatorTok}[1]{\textcolor[HTML]{81A1C1}{#1}}}
+\@ifundefined{BuiltInTok}{}{\renewcommand{\BuiltInTok}[1]{\textcolor[HTML]{88C0D0}{#1}}}
+\@ifundefined{ExtensionTok}{}{\renewcommand{\ExtensionTok}[1]{\textcolor[HTML]{D8DEE9}{#1}}}
+\@ifundefined{PreprocessorTok}{}{\renewcommand{\PreprocessorTok}[1]{\textcolor[HTML]{D08770}{#1}}}
+\@ifundefined{AttributeTok}{}{\renewcommand{\AttributeTok}[1]{\textcolor[HTML]{8FBCBB}{#1}}}
+\@ifundefined{RegionMarkerTok}{}{\renewcommand{\RegionMarkerTok}[1]{\textcolor[HTML]{D8DEE9}{#1}}}
+\@ifundefined{InformationTok}{}{\renewcommand{\InformationTok}[1]{\textcolor[HTML]{EBCB8B}{\textit{#1}}}}
+\@ifundefined{WarningTok}{}{\renewcommand{\WarningTok}[1]{\textcolor[HTML]{BF616A}{\textbf{#1}}}}
+\@ifundefined{AlertTok}{}{\renewcommand{\AlertTok}[1]{\textcolor[HTML]{BF616A}{\textbf{#1}}}}
+\@ifundefined{ErrorTok}{}{\renewcommand{\ErrorTok}[1]{\textcolor[HTML]{BF616A}{\textbf{#1}}}}
+\@ifundefined{NormalTok}{}{\renewcommand{\NormalTok}[1]{\textcolor[HTML]{D8DEE9}{#1}}}
+\makeatother
 
 % Ensure Shaded environment always provides the grey background
 \makeatletter
@@ -98,10 +131,10 @@ $highlighting-macros$
 }
 \makeatother
 \lstset{
-  basicstyle=\small\ttfamily\color{pctgray},
-  backgroundcolor=\color{codebg},
-  frame=single,
-  rulecolor=\color{rulecolor},
+  basicstyle=\small\ttfamily\color[HTML]{D8DEE9},
+  backgroundcolor=\color{shadecolor},
+  frame=none,
+  rulecolor=\color{shadecolor},
   framesep=6pt,
   xleftmargin=6pt,
   xrightmargin=6pt,
