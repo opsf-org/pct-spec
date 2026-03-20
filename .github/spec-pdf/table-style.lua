@@ -3,13 +3,13 @@
 -- and a light rule between every row.
 
 local function render_inlines(inlines)
-  return pandoc.write(pandoc.Pandoc({pandoc.Plain(inlines)}), 'latex')
-    :gsub('%s+$', '')
+  local s = pandoc.write(pandoc.Pandoc({pandoc.Plain(inlines)}), 'latex')
+  return (s:gsub('%s+$', ''))
 end
 
 local function render_blocks(blocks)
-  return pandoc.write(pandoc.Pandoc(blocks), 'latex')
-    :gsub('%s+$', '')
+  local s = pandoc.write(pandoc.Pandoc(blocks), 'latex')
+  return (s:gsub('%s+$', ''))
 end
 
 function Table(tbl)
