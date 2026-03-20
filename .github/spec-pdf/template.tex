@@ -1,0 +1,171 @@
+% PCT Specification — Pandoc LaTeX Template
+% Based on the default Pandoc template with custom styling
+\documentclass[11pt,a4paper]{article}
+
+% ── Fonts & Encoding ─────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{inconsolata}          % nicer monospace font
+
+% ── Page Geometry ────────────────────────────────────────────────
+\usepackage[
+  top=1.2in,
+  bottom=1.2in,
+  left=1.25in,
+  right=1.25in
+]{geometry}
+
+% ── Colours ──────────────────────────────────────────────────────
+\usepackage[dvipsnames,svgnames]{xcolor}
+\definecolor{pctblue}{HTML}{1A3A5C}
+\definecolor{pctaccent}{HTML}{2B7A78}
+\definecolor{pctgray}{HTML}{4A4A4A}
+\definecolor{codebg}{HTML}{F5F5F5}
+\definecolor{rulecolor}{HTML}{CCCCCC}
+
+% ── Typography ───────────────────────────────────────────────────
+\usepackage{microtype}
+\usepackage{parskip}              % space between paragraphs, no indent
+\setlength{\parskip}{0.5em}
+
+% ── Headers & Footers ───────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{pctgray}\textit{Privacy Claims Token — Open Specification}}
+\fancyhead[R]{\small\color{pctgray}$if(version)$$version$$else$v0.1$endif$}
+\fancyfoot[C]{\small\color{pctgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ── Section Styling ──────────────────────────────────────────────
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\Large\bfseries\color{pctblue}}
+  {\thesection}{0.8em}{}
+  [\vspace{-0.4em}{\color{pctaccent}\rule{\textwidth}{0.8pt}}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{pctblue}}
+  {\thesubsection}{0.7em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{pctblue}}
+  {\thesubsubsection}{0.6em}{}
+
+\titlespacing*{\section}{0pt}{1.5em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.3em}
+
+% ── Code Blocks ──────────────────────────────────────────────────
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily\color{pctgray},
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{rulecolor},
+  framesep=6pt,
+  xleftmargin=6pt,
+  xrightmargin=6pt,
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=2,
+  showstringspaces=false,
+  captionpos=b,
+  aboveskip=1em,
+  belowskip=1em,
+}
+
+% ── Tables ───────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\renewcommand{\arraystretch}{1.3}
+
+% ── Links ────────────────────────────────────────────────────────
+\usepackage[
+  colorlinks=true,
+  linkcolor=pctblue,
+  urlcolor=pctaccent,
+  citecolor=pctblue,
+  bookmarks=true,
+  bookmarksnumbered=true,
+  pdfstartview=FitH
+]{hyperref}
+
+% ── Lists ────────────────────────────────────────────────────────
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=1.5em}
+\setlist[itemize,1]{label={\color{pctaccent}\textbullet}}
+\setlist[itemize,2]{label={\color{pctaccent}--}}
+
+% ── Graphics (for potential future use) ──────────────────────────
+\usepackage{graphicx}
+
+% ── PDF Metadata ─────────────────────────────────────────────────
+\hypersetup{
+  pdftitle={Privacy Claims Token (PCT) — Open Specification},
+  pdfauthor={DPG Labs · The Data Privacy Group},
+  pdfsubject={PCT Specification $if(version)$$version$$else$v0.1$endif$},
+  pdfkeywords={privacy, data governance, JWT, claims token, specification}
+}
+
+% ── Title Page ───────────────────────────────────────────────────
+$if(title)$
+\title{}  % suppress default title
+$endif$
+
+\begin{document}
+
+% ── Custom Title Page ────────────────────────────────────────────
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{2cm}
+
+  {\color{pctaccent}\rule{\textwidth}{1.2pt}}
+
+  \vspace{1.5cm}
+
+  {\Huge\bfseries\color{pctblue} Privacy Claims Token (PCT)}
+
+  \vspace{0.5cm}
+
+  {\LARGE\color{pctgray} Open Specification}
+
+  \vspace{1cm}
+
+  {\large\color{pctaccent}\bfseries $if(version)$$version$$else$Version 0.1$endif$ · Draft for Public Comment}
+
+  \vspace{0.8cm}
+
+  {\normalsize\color{pctgray} $if(date)$$date$$else$March 2026$endif$}
+
+  \vspace{1.5cm}
+
+  {\color{pctaccent}\rule{\textwidth}{1.2pt}}
+
+  \vspace{2cm}
+
+  {\normalsize\color{pctgray}
+    DPG Labs · The Data Privacy Group\\[0.3em]
+    \href{https://thedpg.com}{thedpg.com}
+  }
+
+  \vspace{1.5cm}
+
+  {\small\color{pctgray}\textit{%
+    Released under the Creative Commons Attribution 4.0\\
+    International Licence (CC BY 4.0)
+  }}
+
+\end{center}
+
+\newpage
+\setcounter{page}{1}
+
+% ── Body ─────────────────────────────────────────────────────────
+$body$
+
+\end{document}
