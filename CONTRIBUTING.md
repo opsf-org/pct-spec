@@ -56,6 +56,43 @@ The specification is released under CC BY 4.0. By submitting a contribution, you
 
 ---
 
+## Branching Strategy
+
+### Long-lived branches
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Tagged releases only. Every commit is a published, citable version of the spec. Protected — PR-only with required reviews. |
+| `develop` | Integration branch. All PRs target here. When stable, merged to `main` with a version tag. |
+
+### Short-lived branches
+
+| Pattern | Purpose | Example |
+|---------|---------|---------|
+| `feat/<description>` | New spec content (fields, sections, extensions) | `feat/ccpa-extension-namespace` |
+| `fix/<description>` | Corrections, typos, broken links | `fix/section-5-typo` |
+| `examples/<description>` | New example tokens or scenarios | `examples/hipaa-phi-scenario` |
+| `rfc/<topic>` | Substantive proposals that need discussion | `rfc/pct-composition-rules` |
+
+### Release tags & versioning
+
+Tags on `main` follow the spec version directly:
+
+- `v0.1` — Current draft for public comment
+- `v0.2` — Next revision incorporating feedback
+- `v1.0` — First stable release
+
+Patch tags (e.g. `v0.1.1`) may be used for editorial corrections that don't change the spec's substance.
+
+### Workflow
+
+1. Branch from `develop` using the naming conventions above
+2. Open a PR targeting `develop`
+3. At least one maintainer review required
+4. When `develop` is stable for a release, maintainers PR into `main` and tag
+
+---
+
 ## Code of Conduct
 
 This project follows a simple standard: be respectful, be constructive, and focus on the technical and regulatory substance. Personal criticism or unconstructive commentary will be removed.
