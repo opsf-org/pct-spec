@@ -14,7 +14,7 @@ local function make_code_breakable(blocks)
     { Code = function(el)
         -- Insert \hspace{0pt} at _ . : to allow line breaks
         local s = el.text
-          :gsub('_', '\\hspace{0pt}_\\hspace{0pt}')
+          :gsub('_', '\\hspace{0pt}\\_\\hspace{0pt}')
           :gsub('%.', '\\hspace{0pt}.\\hspace{0pt}')
           :gsub(':', '\\hspace{0pt}:\\hspace{0pt}')
         return pandoc.RawInline('latex',
