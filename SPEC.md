@@ -370,12 +370,14 @@ The following signing algorithms are supported in version 0.1:
 
 The signature is computed over the Base64URL encoding of the header concatenated with a period and the Base64URL encoding of the payload, consistent with RFC 7519 Section 7.2.
 
-```
+```text
 signature = sign(
   Base64URL(header) + '.' + Base64URL(payload),
   private_key
 )
+```
 
+```text
 pct = Base64URL(header) + '.' + Base64URL(payload) + '.' + Base64URL(signature)
 ```
 
@@ -722,7 +724,7 @@ Comments, corrections, and proposed extensions for version 0.2 should be submitt
 
 **pct@dpglabs.io**
 
-[github.com/dpg-labs/pct-spec](https://github.com/dpg-labs/pct-spec)
+[github.com/dpglabs/pct-spec](https://github.com/dpglabs/pct-spec)
 
 ---
 
