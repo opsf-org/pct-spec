@@ -1,0 +1,47 @@
+name: Build Spec PDF
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-fonts-extra \
+            lmodern
+
+      - name: Build PDF
+        run: |
+          pandoc SPEC.md \
+            --template=.github/spec-pdf/template.tex \
+            --pdf-engine=pdflatex \
+            --highlight-style=tango \
+            --toc \
+            --toc-depth=3 \
+            -V version="${{ github.event.release.tag_name }}" \
+            -V date="$(date +'%B %Y')" \
+            -V colorlinks=true \
+            -o pct-spec-${{ github.event.release.tag_name }}.pdf
+
+      - name: Attach PDF to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" \
+            "pct-spec-${{ github.event.release.tag_name }}.pdf" \
+            --clobber
