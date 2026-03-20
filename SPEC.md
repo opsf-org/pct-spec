@@ -724,7 +724,7 @@ Comments, corrections, and proposed extensions for version 0.2 should be submitt
 
 **pct@dpglabs.io**
 
-[github.com/dpg-labs/pct-spec](https://github.com/dpg-labs/pct-spec)
+[github.com/dpglabs/pct-spec](https://github.com/dpglabs/pct-spec)
 
 ---
 
