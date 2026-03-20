@@ -37,6 +37,7 @@ function Table(tbl)
   local out = {}
   local function add(s) table.insert(out, s) end
 
+  add('\\begin{small}')
   add('\\begin{longtable}[]{@{}' .. table.concat(cols, '') .. '@{}}')
 
   -- ── Header ──────────────────────────────────────────────
@@ -80,6 +81,7 @@ function Table(tbl)
 
   add('\\arrayrulecolor{pctnavy}\\bottomrule')
   add('\\end{longtable}')
+  add('\\end{small}')
 
   return pandoc.RawBlock('latex', table.concat(out, '\n'))
 end
