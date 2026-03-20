@@ -31,6 +31,8 @@
 \usepackage{etoolbox}             % for \pretocmd
 \usepackage{parskip}              % space between paragraphs, no indent
 \setlength{\parskip}{0.5em}
+\sloppy                           % prevent text from overflowing into margins
+\setlength{\emergencystretch}{3em}% extra stretch to avoid overfull hboxes
 
 % ── Headers & Footers ───────────────────────────────────────────
 \usepackage{fancyhdr}
