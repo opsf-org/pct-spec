@@ -32,6 +32,10 @@
         "residency_required": true,
         "sovereignty_framework": "UK_adequacy"
       },
+      "data_hash": "n4bQgYhMfWWaL-qgxVrQFaO_TxsrC4Is0V1sFbDwCgg",
+      "hash_algorithm": "sha-256",
+      "hash_scope": "full_payload",
+      "data_format": "application/json",
       "ai_context": {
         "model_id": "medai-v2-uk",
         "model_region": "GB",
@@ -60,6 +64,7 @@
     "checks": [
       { "check_name": "signature_verification", "result": "pass" },
       { "check_name": "expiry_check", "result": "pass" },
+      { "check_name": "data_binding_check", "result": "pass", "detail": "data_hash matches recomputed hash" },
       { "check_name": "purpose_check", "result": "pass", "detail": "clinical_analytics is in allowed_purposes" },
       { "check_name": "jurisdiction_check", "result": "pass", "detail": "GB is in permitted_regions" },
       { "check_name": "consent_check", "result": "pass", "detail": "consent_status true, scope covers clinical_analytics" },

@@ -16,7 +16,10 @@
     "data_categories",
     "lawful_basis",
     "allowed_purposes",
-    "jurisdiction_rules"
+    "jurisdiction_rules",
+    "data_hash",
+    "hash_algorithm",
+    "hash_scope"
   ],
   "properties": {
     "pct_id": {
@@ -179,6 +182,24 @@
     "automated_decision_flag": {
       "type": "boolean",
       "description": "Set to true if the data may be used in automated decision-making subject to Article 22 GDPR."
+    },
+    "data_hash": {
+      "type": "string",
+      "description": "Cryptographic hash of the canonical serialised form of the data payload at the time of token issuance. Base64url-encoded."
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "enum": ["sha-256", "sha-384", "sha-512"],
+      "description": "The hashing algorithm used to produce data_hash. MD5 and SHA-1 are prohibited."
+    },
+    "hash_scope": {
+      "type": "string",
+      "enum": ["full_payload", "merkle_root"],
+      "description": "Defines what was hashed. full_payload for entire payload, merkle_root for Merkle tree structure."
+    },
+    "data_format": {
+      "type": "string",
+      "description": "MIME type or format descriptor of the data payload at the time of hashing (e.g. application/json, text/csv)."
     },
     "ai_context": {
       "type": "object",
