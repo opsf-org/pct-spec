@@ -92,7 +92,6 @@ When a verification request is made, the enforcement point checks this token and
 |------|-------------|
 | [`README.md`](README.md) | This file — overview and quick start |
 | [`SPEC.md`](SPEC.md) | Full specification in Markdown |
-| [`PCT_Specification_v0_1.docx`](PCT_Specification_v0_1.docx) | Full specification as Word document (downloadable) |
 | [`schema/pct-schema-0.1.json`](schema/pct-schema-0.1.json) | JSON Schema (Draft 2020-12) for PCT payload validation |
 | [`examples/`](examples/) | Example PCT tokens and verification scenarios |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to submit comments, corrections, and extensions |
