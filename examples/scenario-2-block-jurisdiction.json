@@ -31,6 +31,10 @@
         "permitted_regions": ["GB"],
         "residency_required": true
       },
+      "data_hash": "n4bQgYhMfWWaL-qgxVrQFaO_TxsrC4Is0V1sFbDwCgg",
+      "hash_algorithm": "sha-256",
+      "hash_scope": "full_payload",
+      "data_format": "application/json",
       "ai_context": {
         "model_id": "us-general-llm-v3",
         "model_region": "US",
@@ -55,6 +59,7 @@
     "checks": [
       { "check_name": "signature_verification", "result": "pass" },
       { "check_name": "expiry_check", "result": "pass" },
+      { "check_name": "data_binding_check", "result": "pass", "detail": "data_hash matches recomputed hash" },
       { "check_name": "purpose_check", "result": "pass" },
       { "check_name": "jurisdiction_check", "result": "fail", "detail": "model_region US not in permitted_regions [GB]; residency_required is true" }
     ]

@@ -12,7 +12,7 @@ This project follows [Semantic Versioning](https://semver.org/) for specificatio
 
 ### Added
 
-- Core schema (Section 5): header fields, core payload fields, `lawful_basis`, `jurisdiction_rules`, `transfer_restrictions`, `ai_context`, extension namespaces
+- Core schema (Section 5): header fields, core payload fields, `lawful_basis`, `jurisdiction_rules`, `transfer_restrictions`, data binding and integrity verification (Section 5.8), `ai_context`, extension namespaces
 - PCT lifecycle definition (Section 4): six states — Issuance, Attachment, Transmission, Verification, Decision, Audit
 - Signing and verification model (Section 6): RS256 and HS256 support, consistent with RFC 7519
 - Enforcement API contract (Section 7): minimum verification request/response schema

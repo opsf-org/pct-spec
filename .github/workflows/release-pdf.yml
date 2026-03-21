@@ -27,7 +27,8 @@ jobs:
 
       - name: Build PDF
         run: |
-          pandoc SPEC.md \
+          awk 'NR==1{print;next} /^## Abstract/{found=1} !found{next} /^## Table of Contents/{toc=1;next} toc&&/^---/{toc=0;next} toc{next} {print}' SPEC.md | \
+          pandoc -f markdown \
             --template=.github/spec-pdf/template.tex \
             --pdf-engine=pdflatex \
             --shift-heading-level-by=-1 \
