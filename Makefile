@@ -6,14 +6,14 @@ OUTPUT  ?= pct-spec-$(VERSION).pdf
 
 pdf: $(OUTPUT)
 
-$(OUTPUT): SPEC.md .github/spec-pdf/template.tex
-	sed '/^## Table of Contents$$/,/^---$$/{d;}' SPEC.md | \
+$(OUTPUT): SPEC.md .github/spec-pdf/template.tex .github/spec-pdf/table-style.lua
+	awk 'NR==1{print;next} /^## Abstract$$/{found=1} !found{next} /^## Table of Contents$$/{toc=1;next} toc&&/^---$$/{toc=0;next} toc{next} {print}' SPEC.md | \
 	pandoc -f markdown \
 		--template=.github/spec-pdf/template.tex \
 		--pdf-engine=pdflatex \
 		--shift-heading-level-by=-1 \
 		--lua-filter=.github/spec-pdf/table-style.lua \
-		--syntax-highlighting=tango \
+		--highlight-style=tango \
 		--toc \
 		--toc-depth=3 \
 		-V version="$(VERSION)" \
