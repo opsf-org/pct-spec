@@ -1,6 +1,6 @@
 # Privacy Claims Token (PCT) — Open Specification
 
-**Version 0.1 · Draft for Public Comment**
+**Version 0.2 · Draft for Public Comment**
 
 March 2026
 
@@ -20,7 +20,7 @@ The Privacy Claims Token (PCT) specification defines an open, portable format fo
 
 This specification addresses the core gap in modern data governance: obligations are documented in policy platforms and systems of record, but are not consistently enforced at the point of execution. PCT bridges that gap by making obligations machine-readable, portable, tamper-evident, and verifiable in real time.
 
-Version 0.1 is a draft for public comment. Implementations, corrections, and extensions are welcomed from any party. The specification is designed to be jurisdiction-neutral and extensible to all current and future privacy, AI governance, and data sovereignty regulatory frameworks.
+Version 0.2 is a draft for public comment. Implementations, corrections, and extensions are welcomed from any party. The specification is designed to be jurisdiction-neutral and extensible to all current and future privacy, AI governance, and data sovereignty regulatory frameworks.
 
 ---
 

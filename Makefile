@@ -1,6 +1,13 @@
-VERSION ?= v0.1
+VERSION ?= v0.2
+STATUS  ?= draft
 DATE    ?= $(shell date +'%B %Y')
-OUTPUT  ?= pct-spec-$(VERSION).pdf
+
+# Build output filename: pct-spec-v0.2-draft.pdf or pct-spec-v0.2.pdf
+ifeq ($(STATUS),release)
+  OUTPUT ?= pct-spec-$(VERSION).pdf
+else
+  OUTPUT ?= pct-spec-$(VERSION)-$(STATUS).pdf
+endif
 
 .PHONY: pdf clean
 
@@ -17,6 +24,7 @@ $(OUTPUT): SPEC.md .github/spec-pdf/template.tex .github/spec-pdf/table-style.lu
 		--toc \
 		--toc-depth=3 \
 		-V version="$(VERSION)" \
+		-V status="$(STATUS)" \
 		-V date="$(DATE)" \
 		-o $(OUTPUT)
 	@echo "Built $(OUTPUT)"

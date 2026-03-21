@@ -78,18 +78,43 @@ The specification is released under CC BY 4.0. By submitting a contribution, you
 
 Tags on `main` follow the spec version directly:
 
-- `v0.1` — Current draft for public comment
-- `v0.2` — Next revision incorporating feedback
+- `v0.1` — First draft for public comment
+- `v0.2` — Second revision incorporating feedback
 - `v1.0` — First stable release
 
 Patch tags (e.g. `v0.1.1`) may be used for editorial corrections that don't change the spec's substance.
+
+### Draft tags
+
+Draft tags are used to publish snapshots of `develop` for community review before a version is finalised. They follow the pattern `v<version>-draft.<n>`:
+
+- `v0.2-draft.1` — First draft snapshot of v0.2 for community review
+- `v0.2-draft.2` — Revised draft after incorporating feedback
+- `v0.2-draft.3` — Further revision, etc.
+
+Draft tags are created on `develop` (not `main`). They are **retained permanently** as a historical record of what was reviewed — they are not deleted when the final version is released.
+
+### Building the PDF
+
+The Makefile accepts `VERSION` and `STATUS` variables:
+
+```bash
+# Draft PDF (default) — produces pct-spec-v0.2-draft.pdf
+make pdf
+
+# Final release PDF — produces pct-spec-v0.2.pdf (no watermark)
+make pdf VERSION=v0.2 STATUS=release
+```
+
+When `STATUS` is anything other than `release`, the PDF includes a diagonal watermark and the status label in the header and cover page.
 
 ### Workflow
 
 1. Branch from `develop` using the naming conventions above
 2. Open a PR targeting `develop`
 3. At least one maintainer review required
-4. When `develop` is stable for a release, maintainers PR into `main` and tag
+4. When ready for community review, maintainers tag `develop` as `v<version>-draft.<n>` and build a draft PDF
+5. When `develop` is stable for a release, maintainers PR into `main` and tag the final version (e.g. `v0.2`)
 
 ---
 
