@@ -31,6 +31,10 @@
         "permitted_regions": ["DE", "FR", "NL"],
         "residency_required": true
       },
+      "data_hash": "Ky3Lh6c4dO2QF8gB_rT0xP1mN7vS5wA9jE3kU6iY8bZ",
+      "hash_algorithm": "sha-256",
+      "hash_scope": "full_payload",
+      "data_format": "application/json",
       "extensions": {
         "x-hipaa:phi_flag": true,
         "x-hipaa:minimum_necessary": true
@@ -57,6 +61,7 @@
     "checks": [
       { "check_name": "signature_verification", "result": "pass" },
       { "check_name": "expiry_check", "result": "pass" },
+      { "check_name": "data_binding_check", "result": "pass", "detail": "data_hash matches recomputed hash" },
       { "check_name": "purpose_check", "result": "fail", "detail": "secondary_commercial_research not in allowed_purposes" },
       { "check_name": "jurisdiction_check", "result": "fail", "detail": "US not in permitted_regions [DE, FR, NL]" },
       { "check_name": "consent_check", "result": "fail", "detail": "consent_scope [clinical_trial_protocol_A] does not cover secondary_commercial_research" }

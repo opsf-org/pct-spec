@@ -51,7 +51,8 @@ Version 0.1 is a draft for public comment. Implementations, corrections, and ext
    - 5.5 [The jurisdiction_rules object](#55-the-jurisdiction_rules-object)
    - 5.6 [The transfer_restrictions object](#56-the-transfer_restrictions-object)
    - 5.7 [Extension namespaces](#57-extension-namespaces)
-   - 5.8 [The ai_context object](#58-the-ai_context-object)
+   - 5.8 [Data binding and integrity verification](#58-data-binding-and-integrity-verification)
+   - 5.9 [The ai_context object](#59-the-ai_context-object)
 6. [Signing and Verification](#6-signing-and-verification)
    - 6.1 [Signing requirements](#61-signing-requirements)
    - 6.2 [Signature construction](#62-signature-construction)
@@ -76,7 +77,8 @@ Version 0.1 is a draft for public comment. Implementations, corrections, and ext
     - 11.1 [Claim accuracy](#111-claim-accuracy)
     - 11.2 [Key compromise](#112-key-compromise)
     - 11.3 [Replay attacks](#113-replay-attacks)
-    - 11.4 [Consent withdrawal](#114-consent-withdrawal)
+    - 11.4 [Token detachment and data substitution](#114-token-detachment-and-data-substitution)
+    - 11.5 [Consent withdrawal](#115-consent-withdrawal)
 - [Appendix A — Full PCT JSON Schema](#appendix-a--full-pct-json-schema)
 - [Appendix B — Controlled Purpose Vocabulary](#appendix-b--controlled-purpose-vocabulary)
 - [Appendix C — Version History](#appendix-c--version-history)
@@ -292,7 +294,11 @@ When serialised for transmission, the PCT must be encoded as a Base64URL-encoded
 | `transfer_restrictions` | object | CONDITIONAL | Required when `subject_type` is `transfer` or when cross-border processing is anticipated. See Section 5.6. |
 | `retention_limit` | string (ISO 8601 duration) | OPTIONAL | The maximum period for which the data may be retained (e.g. `P2Y` for two years). |
 | `automated_decision_flag` | boolean | OPTIONAL | Set to true if the data may be used in automated decision-making subject to Article 22 GDPR or equivalent. |
-| `ai_context` | object | CONDITIONAL | Required when `subject_type` is `ai_interaction`. See Section 5.8. |
+| `data_hash` | string | **REQUIRED** | Cryptographic hash of the canonical serialised form of the data payload at the time of token issuance. See Section 5.8 for canonicalisation requirements. |
+| `hash_algorithm` | enum | **REQUIRED** | Hashing algorithm used to produce `data_hash`. Permitted values: `sha-256`, `sha-384`, `sha-512`. `sha-256` is RECOMMENDED. MD5 and SHA-1 are explicitly prohibited. |
+| `hash_scope` | enum | **REQUIRED** | Defines what was hashed. Permitted values: `full_payload` (entire data payload hashed as a single unit), `merkle_root` (Merkle tree hash structure; see Section 5.8.3). |
+| `data_format` | string | OPTIONAL | MIME type or format descriptor of the data payload at the time of hashing (e.g. `application/json`, `text/csv`, `application/octet-stream`). Assists verifiers in reproducing the canonical form. |
+| `ai_context` | object | CONDITIONAL | Required when `subject_type` is `ai_interaction`. See Section 5.9. |
 | `extensions` | object | OPTIONAL | Extension namespace claims. See Section 5.7. |
 
 ### 5.4 The lawful_basis object
@@ -336,7 +342,96 @@ Extension claims are added to the `extensions` object using the prefix conventio
 
 Any implementer may define additional extension namespaces using the `x-{label}:` prefix. Extension namespaces not defined in this specification must be documented publicly by the defining party. Verifiers encountering unknown extension namespaces must not fail silently — they must either evaluate the extension claim or flag the PCT as requiring human review.
 
-### 5.8 The ai_context object
+### 5.8 Data binding and integrity verification
+
+#### 5.8.1 Purpose
+
+The data binding mechanism ensures that a PCT token is cryptographically bound to the specific data payload it was issued to govern. A verifier receiving a PCT token and a data payload can confirm:
+
+1. That the data has not been modified since the token was issued
+2. That the token has not been detached from its original data and reattached to a different payload
+3. That the token's claims apply to the data presented, and no other data
+
+#### 5.8.2 Canonicalisation requirement
+
+To ensure consistent and reproducible hash values across different systems and implementations, the data payload MUST be serialised into a canonical form before hashing. The canonical form is defined as follows:
+
+- **For JSON payloads:** RFC 8785 JSON Canonicalisation Scheme (JCS). All keys MUST be sorted lexicographically. All whitespace outside string values MUST be removed. Unicode characters MUST be encoded consistently per RFC 8785.
+- **For binary payloads:** The raw byte sequence as transmitted, with no transformation applied.
+- **For structured data in other formats (CSV, XML, etc.):** The implementation MUST document the specific canonicalisation method applied in the `data_format` field and MUST apply it consistently across all issuance and verification operations.
+
+Failure to use a canonical form risks hash verification failures caused by insignificant formatting differences rather than genuine data modification. This would undermine the utility of the binding mechanism and MUST be avoided.
+
+#### 5.8.3 Large dataset handling — Merkle tree hashing
+
+For large datasets where computing a hash of the entire payload at every verification event is computationally impractical, implementations MAY use a Merkle tree hash structure. In this case:
+
+- The data payload is divided into chunks of a consistent, implementation-defined size
+- Each chunk is hashed individually using the algorithm specified in `hash_algorithm`
+- The hashes are combined into a Merkle tree and the root hash is stored in `data_hash`
+- The field `hash_scope` MUST be set to `merkle_root`
+- The chunk size and tree construction method MUST be documented in the implementation's conformance statement
+
+Merkle tree hashing allows individual chunks of a large dataset to be verified independently without requiring the entire dataset to be re-hashed, which is particularly valuable in streaming and pipeline processing scenarios.
+
+#### 5.8.4 Token issuance with data binding
+
+When issuing a PCT token with data binding, the issuer MUST:
+
+1. Serialise the data payload into its canonical form as defined in Section 5.8.2
+2. Compute the hash of the canonical form using the algorithm specified in `hash_algorithm`
+3. Set `data_hash` to the Base64url-encoded hash value
+4. Set `hash_algorithm` to the algorithm identifier
+5. Set `hash_scope` to `full_payload` or `merkle_root` as appropriate
+6. Include all data binding fields in the PCT payload before signing
+7. Sign the complete payload including the data binding fields using the signing mechanism defined in Section 6
+
+The data binding fields are part of the signed payload and are therefore protected by the token signature. Any modification to `data_hash`, `hash_algorithm`, or `hash_scope` after signing will cause signature verification to fail.
+
+#### 5.8.5 Verification of data binding
+
+When verifying a PCT token and its associated data payload, the verifier MUST:
+
+1. Verify the token signature as defined in Section 6
+2. Extract `data_hash`, `hash_algorithm`, and `hash_scope` from the verified payload
+3. Serialise the received data payload into its canonical form using the same method as the issuer
+4. Compute the hash of the canonical form using the algorithm identified in `hash_algorithm`
+5. Compare the computed hash with the value in `data_hash`
+6. If the hashes do not match, the verification MUST fail and the data MUST NOT be processed under the claims in the token
+7. If the hashes match, the verifier MAY proceed to evaluate the token's claims
+
+A verification failure at step 6 indicates one of the following conditions:
+- The data payload has been modified since the token was issued
+- The token has been detached from its original data and presented with a different payload
+- The canonical serialisation method used by the verifier differs from that used by the issuer (implementation error)
+
+In all cases, processing MUST be halted and the event MUST be recorded in the audit log as a data integrity failure.
+
+#### 5.8.6 Legitimate data transformation
+
+Some processing operations permitted by a PCT token may materially change the data payload, for example anonymisation, aggregation, pseudonymisation, or format conversion. Such transformations will invalidate the original data binding because the transformed data will produce a different hash.
+
+Where a permitted transformation produces a materially different data payload, the following rules apply:
+
+1. A new PCT token MUST be issued for the transformed payload, with a new `data_hash` computed from the transformed data in its canonical form
+2. The new token SHOULD reference the original token's `pct_id` in a `derived_from` field to maintain the audit chain
+3. The original token SHOULD be explicitly deprecated by the issuer
+4. The transformation event MUST be recorded in the audit log, referencing both the original and new token identifiers
+
+Minor transformations that do not change the logical content of the data, such as re-encoding from JSON to CBOR while preserving all field values, require re-issuance only if the canonical serialisation produces a different byte sequence. Implementations SHOULD test canonical equivalence before determining whether re-issuance is required.
+
+#### 5.8.7 Algorithm selection and deprecation
+
+Implementations MUST use one of the permitted hash algorithms listed in the `hash_algorithm` field definition. The following algorithms are explicitly prohibited:
+
+- **`md5`**: Vulnerable to collision attacks. MUST NOT be used.
+- **`sha-1`**: Vulnerable to collision attacks. MUST NOT be used.
+
+The RECOMMENDED algorithm is `sha-256`. Implementations requiring additional collision resistance MAY use `sha-384` or `sha-512`.
+
+The list of permitted algorithms will be reviewed with each major version of the PCT specification. Implementations SHOULD be designed to support algorithm agility, meaning the ability to update the hashing algorithm without requiring a full re-implementation of the data binding mechanism.
+
+### 5.9 The ai_context object
 
 Required when `subject_type` is `ai_interaction`. This object addresses the specific obligations arising when personal or sensitive data is used in connection with an AI model.
 
@@ -390,7 +485,8 @@ A verifier must perform all of the following steps before accepting a PCT:
 3. Verify the signature over `header.payload` using the retrieved key.
 4. Confirm that the `pct_version` in the header is a version supported by the verifier.
 5. Confirm that the current timestamp is between `valid_from` and `expires_at`.
-6. Proceed to claims evaluation as defined in Section 4.5.
+6. Verify the data binding as defined in Section 5.8.5: re-hash the received data payload and compare against `data_hash`.
+7. Proceed to claims evaluation as defined in Section 4.5.
 
 If any step fails, the PCT must be treated as invalid and the action must be blocked. Verifiers must not skip steps or apply partial verification.
 
@@ -486,6 +582,10 @@ This example shows a PCT that would result in an ALLOW decision for a clinical a
     "permitted_regions": ["GB"],
     "residency_required": true
   },
+  "data_hash": "n4bQgYhMfWWaL-qgxVrQFaO_TxsrC4Is0V1sFbDwCgg",
+  "hash_algorithm": "sha-256",
+  "hash_scope": "full_payload",
+  "data_format": "application/json",
   "ai_context": {
     "model_id": "medai-v2-uk",
     "model_region": "GB",
@@ -615,7 +715,11 @@ If an issuer's private signing key is compromised, all PCTs signed with that key
 
 A PCT that has been captured in transit could be replayed to authorise an action for which the PCT was not originally intended. Implementations should mitigate replay risk by binding the PCT to a specific request using the `request_id` and `request_timestamp` fields in the verification request, and by setting `expires_at` values appropriate to the sensitivity of the data.
 
-### 11.4 Consent withdrawal
+### 11.4 Token detachment and data substitution
+
+A valid PCT could be detached from its original data and presented with a different, potentially malicious, dataset. The data binding mechanism defined in Section 5.8 mitigates this by cryptographically binding the token to a hash of the data payload at issuance. Verifiers must always perform the data binding check (Section 5.8.5) before evaluating claims. A mismatch between the computed hash and `data_hash` must be treated as a verification failure.
+
+### 11.5 Consent withdrawal
 
 Where the lawful basis is consent, a PCT issued on the basis of consent becomes invalid if that consent is subsequently withdrawn. PCT lifecycles should be configured with expiry periods short enough that revoked consent is not honoured by stale tokens. For high-sensitivity processing, implementations should implement a consent status check against the live consent record at verification time using the `consent_record_ref` field.
 
@@ -635,7 +739,8 @@ The following JSON Schema (Draft 2020-12) defines the complete structure of a PC
     "pct_id", "issued_at", "valid_from", "expires_at",
     "issuer", "subject_id", "subject_type", "data_origin",
     "data_categories", "lawful_basis", "allowed_purposes",
-    "jurisdiction_rules"
+    "jurisdiction_rules", "data_hash", "hash_algorithm",
+    "hash_scope"
   ],
   "properties": {
     "pct_id":          { "type": "string", "format": "uuid" },
@@ -679,6 +784,10 @@ The following JSON Schema (Draft 2020-12) defines the complete structure of a PC
         "sovereignty_framework": { "type": "string" }
       }
     },
+    "data_hash":       { "type": "string" },
+    "hash_algorithm":  { "type": "string", "enum": ["sha-256", "sha-384", "sha-512"] },
+    "hash_scope":      { "type": "string", "enum": ["full_payload", "merkle_root"] },
+    "data_format":     { "type": "string" },
     "ai_context":  { "type": "object" },
     "extensions":  { "type": "object" }
   }
@@ -716,7 +825,7 @@ The following values are defined as the standard controlled vocabulary for the `
 
 | Version | Date | Notes |
 |---------|------|-------|
-| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The DPG. |
+| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, data binding and integrity verification, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The DPG. |
 
 ---
 
