@@ -1,8 +1,9 @@
-name: Build Spec PDF
+name: Build & Release Spec PDF
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
 
 permissions:
   contents: write
@@ -13,6 +14,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Determine version and status
+        id: meta
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+          if [[ "${TAG}" == *-draft* ]]; then
+            # e.g. v0.2-draft.1 → version=v0.2, status=draft
+            VERSION="${TAG%%-draft*}"
+            STATUS="draft"
+            PRERELEASE="true"
+            FILENAME="pct-spec-${TAG}.pdf"
+            TITLE="PCT Specification ${TAG} (Draft for Public Comment)"
+          else
+            # e.g. v0.2 → version=v0.2, status=release
+            VERSION="${TAG}"
+            STATUS="release"
+            PRERELEASE="false"
+            FILENAME="pct-spec-${TAG}.pdf"
+            TITLE="PCT Specification ${TAG}"
+          fi
+
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "status=${STATUS}" >> "$GITHUB_OUTPUT"
+          echo "prerelease=${PRERELEASE}" >> "$GITHUB_OUTPUT"
+          echo "filename=${FILENAME}" >> "$GITHUB_OUTPUT"
+          echo "title=${TITLE}" >> "$GITHUB_OUTPUT"
 
       - name: Install Pandoc and LaTeX
         run: |
@@ -27,24 +56,17 @@ jobs:
 
       - name: Build PDF
         run: |
-          awk 'NR==1{print;next} /^## Abstract/{found=1} !found{next} /^## Table of Contents/{toc=1;next} toc&&/^---/{toc=0;next} toc{next} {print}' SPEC.md | \
-          pandoc -f markdown \
-            --template=.github/spec-pdf/template.tex \
-            --pdf-engine=pdflatex \
-            --shift-heading-level-by=-1 \
-            --lua-filter=.github/spec-pdf/table-style.lua \
-            --highlight-style=tango \
-            --toc \
-            --toc-depth=3 \
-            -V version="${{ github.event.release.tag_name }}" \
-            -V date="$(date +'%B %Y')" \
-            -V colorlinks=true \
-            -o pct-spec-${{ github.event.release.tag_name }}.pdf
+          make pdf \
+            VERSION="${{ steps.meta.outputs.version }}" \
+            STATUS="${{ steps.meta.outputs.status }}" \
+            OUTPUT="${{ steps.meta.outputs.filename }}"
 
-      - name: Attach PDF to release
+      - name: Create GitHub Release with PDF
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload "${{ github.event.release.tag_name }}" \
-            "pct-spec-${{ github.event.release.tag_name }}.pdf" \
-            --clobber
+          gh release create "${{ steps.meta.outputs.tag }}" \
+            "${{ steps.meta.outputs.filename }}" \
+            --title "${{ steps.meta.outputs.title }}" \
+            --prerelease=${{ steps.meta.outputs.prerelease }} \
+            --generate-notes
