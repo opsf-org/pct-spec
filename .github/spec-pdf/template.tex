@@ -5,8 +5,9 @@
 % ── Fonts & Encoding ─────────────────────────────────────────────
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[scaled=0.92]{helvet}  % Helvetica (matches target PDF)
 \usepackage{inconsolata}          % nicer monospace font
+\renewcommand{\familydefault}{\sfdefault}
 
 % ── Page Geometry ────────────────────────────────────────────────
 \usepackage[
@@ -38,10 +39,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\color{pctgray}\textit{Privacy Claims Token — Open Specification}}
-\fancyhead[R]{\small\color{pctgray}$if(version)$$version$$else$v0.1$endif$}
-\fancyfoot[L]{\footnotesize\color{pctgray}\textcopyright\ 2026 DPG Labs. CC BY 4.0}
-\fancyfoot[C]{\small\color{pctgray}\thepage}
+\fancyhead[L]{\small\color{pctgray}Privacy Claims Token --- Open Specification $if(version)$$version$$else$v0.1$endif$}
+\fancyhead[R]{}
+\fancyfoot[L]{\footnotesize\color{pctgray}\textcopyright\ 2026 DPG Labs \pctsep{} The DPG \pctsep{} dpglabs.io \pctsep{} CC BY 4.0}
+\fancyfoot[C]{}
+\fancyfoot[R]{\small\color{pctgray}Page \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{\hbox to\headwidth{\color{pctgold}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrulewidth}{0pt}
@@ -51,10 +53,11 @@
 
 \setcounter{secnumdepth}{0}       % headings already have manual numbers
 
-\titleformat{\section}
+\titleformat{\section}[display]
   {\Large\bfseries\color{pctblue}}
-  {}{0pt}{}
-  [\vspace{-0.4em}{\color{pctaccent}\rule{\textwidth}{0.8pt}}]
+  {\color{pctaccent}\rule{\textwidth}{2pt}}
+  {0.2em}
+  {}
 
 % Force a page break before every \section (after titlesec has redefined it)
 \pretocmd{\section}{\clearpage}{}{}
@@ -185,8 +188,12 @@ $highlighting-macros$
 \setlist[itemize,1]{label={\color{pctaccent}\textbullet}}
 \setlist[itemize,2]{label={\color{pctaccent}--}}
 
-% ── Graphics (for potential future use) ──────────────────────────
+% ── Graphics ────────────────────────────────────────────────────────
 \usepackage{graphicx}
+\usepackage{tikz}
+
+% ── Separator (middle dot) ──────────────────────────────────────────
+\newcommand{\pctsep}{\,\textperiodcentered\,}
 
 % ── PDF Metadata ─────────────────────────────────────────────────
 \hypersetup{
@@ -203,58 +210,75 @@ $endif$
 
 \begin{document}
 
-% ── Custom Title Page ────────────────────────────────────────────
+% ── Cover Page ───────────────────────────────────────────────────
 \thispagestyle{empty}
-\begin{center}
-  \vspace*{1cm}
+\pagecolor{pctnavy}
 
-  % Logo — place logo.png in .github/spec-pdf/ to enable
-  \IfFileExists{logo.png}{%
-    \includegraphics[width=2.5cm]{logo.png}\\[1cm]
-  }{%
-    \vspace{1cm}
-  }
+% Gold bar at the very top of the page
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[pctgold] (current page.north west) rectangle ([yshift=-4pt]current page.north east);
+\end{tikzpicture}
 
-  {\color{pctgold}\rule{\textwidth}{1.5pt}}
+\vspace*{3cm}
 
-  \vspace{1.2cm}
+\begin{flushleft}
+  {\fontsize{32}{38}\selectfont\bfseries\color{white} Privacy Claims Token}\\[0.5cm]
+  {\Large\color{white!70!pctnavy} Open Specification}
+\end{flushleft}
 
-  {\Huge\bfseries\color{pctnavy} Privacy Claims Token (PCT)}
+\vspace{2cm}
 
-  \vspace{0.5cm}
+% Metadata card
+\begin{tcolorbox}[
+  colback=pctnavy,
+  colframe=white!25!pctnavy,
+  arc=2pt,
+  boxrule=0.6pt,
+  left=12pt,
+  right=12pt,
+  top=10pt,
+  bottom=10pt
+]
+{\small\color{white!80!pctnavy}
+  $if(version)$$version$$else$0.1$endif$ \pctsep{} Draft for Public Comment\\[0.5em]
+  $if(date)$$date$$else$March 2026$endif$\\[0.5em]
+  Released under CC BY 4.0\\[0.5em]
+  DPG Labs \pctsep{} The DPG\\[0.5em]
+  \href{https://dpglabs.io}{\color{pctgold}dpglabs.io}
+}
+\end{tcolorbox}
 
-  {\LARGE\color{pctgray} Open Specification}
+\vspace{1cm}
+{\color{pctgold}\rule{\textwidth}{1.5pt}}
 
-  \vspace{1cm}
-
-  {\large\color{pctgold}\bfseries $if(version)$$version$$else$Version 0.1$endif$ · Draft for Public Comment}
-
-  \vspace{0.8cm}
-
-  {\normalsize\color{pctgray} $if(date)$$date$$else$March 2026$endif$}
-
-  \vspace{1.2cm}
-
-  {\color{pctgold}\rule{\textwidth}{1.5pt}}
-
-  \vspace{2cm}
-
-  {\normalsize\color{pctnavy}
-    \textbf{DPG Labs} · The DPG\\[0.3em]
-    \href{https://dpglabs.io}{\color{pctgold}dpglabs.io}
-  }
-
-  \vspace{1.5cm}
-
-  {\small\color{pctgray}\textit{%
-    Released under the Creative Commons Attribution 4.0\\
-    International Licence (CC BY 4.0)
-  }}
-
-\end{center}
+\vspace{1.2cm}
+{\normalsize\color{white!65!pctnavy}\textit{Making data obligations machine-readable, portable, and enforceable at runtime.}}
 
 \newpage
-\setcounter{page}{1}
+\nopagecolor
+\setcounter{page}{2}
+
+% ── Metadata Table ──────────────────────────────────────────────────
+{\footnotesize
+\renewcommand{\arraystretch}{1.4}%
+\arrayrulecolor{rulecolor}
+\begin{longtable}[]{@{}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.75\textwidth}@{}}
+\rowcolor{pctnavy} \textcolor{white}{\textbf{Version}} & \textcolor{white}{\textbf{$if(version)$$version$$else$0.1$endif$ \pctsep{} Draft for Public Comment}} \\
+\textbf{Date} & $if(date)$$date$$else$March 2026$endif$ \\
+\hline
+\rowcolor{codebg} \textbf{Authors} & DPG Labs \pctsep{} The DPG \pctsep{} \href{https://dpglabs.io}{dpglabs.io} \\
+\hline
+\textbf{Licence} & Creative Commons Attribution 4.0 International (CC BY 4.0) \\
+\end{longtable}
+}
+
+\vspace{0.3em}
+{\small This specification is released under the Creative Commons Attribution 4.0 International Licence (CC BY 4.0). Anyone may implement, extend, or build upon it freely, provided attribution is given to the original authors.}
+
+\vspace{1em}
+\begin{center}
+{\small\color{pctgray}\textcopyright\ 2026 DPG Labs \pctsep{} CC BY 4.0}
+\end{center}
 
 % ── Body ─────────────────────────────────────────────────────────
 $body$
