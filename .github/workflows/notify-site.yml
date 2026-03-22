@@ -1,0 +1,35 @@
+name: Notify pct-site on release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine version type
+        id: vars
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          if echo "$TAG" | grep -qi "draft"; then
+            echo "version_type=draft" >> "$GITHUB_OUTPUT"
+          else
+            echo "version_type=release" >> "$GITHUB_OUTPUT"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger pct-site sync
+        run: |
+          curl -fsSL -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.PCT_SITE_DISPATCH_TOKEN }}" \
+            https://api.github.com/repos/dpglabs/pct-site/dispatches \
+            -d '{
+              "event_type": "spec-release",
+              "client_payload": {
+                "tag": "${{ steps.vars.outputs.tag }}",
+                "version_type": "${{ steps.vars.outputs.version_type }}"
+              }
+            }'
+          echo "Dispatched sync for ${{ steps.vars.outputs.tag }} (${{ steps.vars.outputs.version_type }})"
