@@ -79,6 +79,21 @@ Version 0.2 is a draft for public comment. Implementations, corrections, and ext
     - 11.3 [Replay attacks](#113-replay-attacks)
     - 11.4 [Token detachment and data substitution](#114-token-detachment-and-data-substitution)
     - 11.5 [Consent withdrawal](#115-consent-withdrawal)
+12. [The PCT Namespace Registry](#12-the-pct-namespace-registry)
+    - 12.1 [Purpose and authority](#121-purpose-and-authority)
+    - 12.2 [Namespace prefix format](#122-namespace-prefix-format)
+    - 12.3 [Registration tiers](#123-registration-tiers)
+    - 12.4 [Registration requirements](#124-registration-requirements)
+    - 12.5 [Registration process](#125-registration-process)
+    - 12.6 [Registrant obligations](#126-registrant-obligations)
+    - 12.7 [Dispute resolution](#127-dispute-resolution)
+    - 12.8 [The registry record format](#128-the-registry-record-format)
+13. [Extension Namespace Promotion to Core](#13-extension-namespace-promotion-to-core)
+    - 13.1 [Purpose](#131-purpose)
+    - 13.2 [Promotion criteria](#132-promotion-criteria)
+    - 13.3 [Promotion process](#133-promotion-process)
+    - 13.4 [Deprecation of promoted extension fields](#134-deprecation-of-promoted-extension-fields)
+    - 13.5 [Fields that will not be promoted](#135-fields-that-will-not-be-promoted)
 - [Appendix A — Full PCT JSON Schema](#appendix-a--full-pct-json-schema)
 - [Appendix B — Controlled Purpose Vocabulary](#appendix-b--controlled-purpose-vocabulary)
 - [Appendix C — Version History](#appendix-c--version-history)
@@ -722,6 +737,169 @@ A valid PCT could be detached from its original data and presented with a differ
 ### 11.5 Consent withdrawal
 
 Where the lawful basis is consent, a PCT issued on the basis of consent becomes invalid if that consent is subsequently withdrawn. PCT lifecycles should be configured with expiry periods short enough that revoked consent is not honoured by stale tokens. For high-sensitivity processing, implementations should implement a consent status check against the live consent record at verification time using the `consent_record_ref` field.
+
+---
+
+## 12. The PCT Namespace Registry
+
+### 12.1 Purpose and authority
+
+The PCT Namespace Registry is the authoritative record of all registered extension namespace prefixes in the PCT ecosystem. It is maintained by DPG Labs as the authoring organisation of this specification.
+
+The registry exists to prevent namespace collisions, establish clear ownership and accountability for each namespace, and ensure that verifiers and implementers can identify the authoritative definition of any extension claim they encounter. Without a registry, two organisations could independently define `x-fintech:` with conflicting semantics, creating ambiguity that undermines the reliability of PCT verification.
+
+Registration is required for any organisation wishing to publish an extension namespace for use by third parties. An organisation may use unregistered namespaces internally, but must not publish or promote unregistered namespaces for external adoption. Verifiers encountering an unregistered namespace must treat it as unverified and flag the PCT for human review rather than failing silently.
+
+### 12.2 Namespace prefix format
+
+All extension namespace prefixes must conform to the following format:
+
+```
+x-{label}:
+```
+
+Where `{label}` is a short, lowercase, alphanumeric identifier with no spaces or special characters other than hyphens. Examples: `x-ccpa:`, `x-lgpd:`, `x-uk-nhs:`, `x-psd2:`.
+
+The following prefixes are reserved by DPG Labs and may not be registered by third parties:
+
+- `x-hipaa:`
+- `x-dora:`
+- `x-duaa:`
+- `x-pecr:`
+- `x-ai-act:`
+- `x-pct:` (reserved for future core extensions)
+
+### 12.3 Registration tiers
+
+The registry operates on two tiers.
+
+**Tier 1 — Open Registration.** Available at no cost to individuals, academic institutions, non-profit organisations, open source projects, and regulatory bodies. Tier 1 registrations are listed in the public registry with full documentation and are eligible for community review and promotion to core.
+
+**Tier 2 — Commercial Registration.** Required for commercial organisations registering namespaces for use in products or services. Tier 2 registrations carry an annual registration fee, are listed in the public registry with full documentation, and are eligible for community review and promotion to core. Commercial registrants receive a verified badge in the registry.
+
+Fee structures for Tier 2 registration are published separately at [pct.thedpg.com/registry](https://pct.thedpg.com/registry) and are reviewed annually.
+
+### 12.4 Registration requirements
+
+An application to register a namespace must include the following:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `namespace_prefix` | string | REQUIRED | The proposed prefix in `x-{label}:` format. |
+| `registrant_name` | string | REQUIRED | The full legal name of the registering organisation or individual. |
+| `registrant_contact` | string (email) | REQUIRED | A stable contact address for the registrant. |
+| `regulatory_framework` | string | REQUIRED | The regulatory framework, standard, or domain the namespace addresses. |
+| `jurisdiction` | string | REQUIRED | The jurisdiction(s) to which the framework applies. |
+| `documentation_url` | string (URI) | REQUIRED | A publicly accessible URL where the full namespace field definitions are documented. |
+| `fields` | array of object | REQUIRED | A summary list of the fields defined within the namespace, each with a name, type, and description. |
+| `version` | string | REQUIRED | The version of the namespace definition being registered. Must follow semantic versioning (e.g. `1.0.0`). |
+| `tier` | enum | REQUIRED | The registration tier. Values: `open`, `commercial`. |
+| `licence` | string | OPTIONAL | The licence under which the namespace definition is published. |
+
+### 12.5 Registration process
+
+Applications are submitted to [registry@pct.thedpg.com](mailto:registry@pct.thedpg.com) or via the web form at [pct.thedpg.com/registry/apply](https://pct.thedpg.com/registry/apply).
+
+DPG Labs will review each application within 14 working days and will either approve the registration, request clarification, or reject the application with reasons. Grounds for rejection include conflict with an existing registration, conflict with the core schema field names, insufficient documentation, or failure to meet the format requirements of Section 12.2.
+
+Approved registrations are published in the PCT Namespace Registry within 5 working days of approval. The registry is publicly available at [pct.thedpg.com/registry](https://pct.thedpg.com/registry) and is also published as a machine-readable JSON file in the PCT specification GitHub repository at `registry/namespaces.json`.
+
+### 12.6 Registrant obligations
+
+Registrants are responsible for:
+
+- Maintaining the accuracy of the documentation at the registered `documentation_url`.
+- Notifying DPG Labs of any material changes to the namespace definition by submitting an updated registration.
+- Renewing commercial registrations annually and maintaining payment of applicable fees.
+- Ensuring that implementations of their namespace are consistent with the registered field definitions.
+
+DPG Labs reserves the right to suspend or revoke a registration where a registrant fails to meet these obligations, where the namespace is found to conflict with the core schema, or where the registered documentation is found to be materially misleading.
+
+### 12.7 Dispute resolution
+
+Where two parties claim entitlement to the same namespace prefix, DPG Labs will adjudicate based on the date of application, the quality and completeness of the documentation, and the legitimacy of the claimed regulatory basis. DPG Labs' decision is final. Parties may appeal in writing within 30 days of a decision.
+
+### 12.8 The registry record format
+
+Each entry in the public registry is a JSON object conforming to the following structure:
+
+```json
+{
+  "namespace_prefix": "x-ccpa",
+  "registrant_name": "Example Organisation",
+  "registrant_contact": "pct@example.org",
+  "regulatory_framework": "California Consumer Privacy Act / CPRA",
+  "jurisdiction": "US-CA",
+  "documentation_url": "https://example.org/pct/x-ccpa",
+  "version": "1.0.0",
+  "tier": "open",
+  "registration_date": "2026-06-01",
+  "status": "active",
+  "fields": [
+    {
+      "name": "opt_out_flag",
+      "type": "boolean",
+      "description": "Indicates whether the data subject has exercised their right to opt out of sale or sharing of personal information."
+    },
+    {
+      "name": "sensitive_pi_flag",
+      "type": "boolean",
+      "description": "Indicates whether the data includes sensitive personal information as defined under CPRA Section 1798.121."
+    }
+  ]
+}
+```
+
+---
+
+## 13. Extension Namespace Promotion to Core
+
+### 13.1 Purpose
+
+The PCT core schema is intentionally minimal. It defines the fields that are universally applicable across all jurisdictions and use cases. Extension namespaces address jurisdiction-specific, sector-specific, or use-case-specific obligations that are not universally applicable.
+
+Over time, some extension namespaces may demonstrate sufficient universality, maturity, and implementer consensus to warrant promotion to the core schema. This section defines the criteria and process by which that promotion may occur.
+
+### 13.2 Promotion criteria
+
+An extension namespace field or set of fields may be considered for promotion to the core schema when all of the following criteria are satisfied:
+
+**Universality.** The obligation addressed by the field arises under regulatory frameworks that together govern a significant majority of global personal data processing activity. A field that is relevant only to a single jurisdiction or sector will not meet this criterion regardless of the size of that jurisdiction or sector.
+
+**Maturity.** The namespace must have been registered and in active documented use for a minimum of one full version cycle of the PCT specification. Fields proposed for promotion from v0.2 extensions must therefore have been registered no later than the publication of v0.2 and must have demonstrable implementation evidence by the time v1.0 is being drafted.
+
+**Implementation evidence.** There must be documented evidence of real-world implementation of the namespace fields in question by at least three independent organisations. Self-certification by the registrant is not sufficient. Evidence may take the form of public conformance declarations, case studies, or verified implementation reports submitted to the PCT GitHub Discussions board.
+
+**Community consensus.** There must be broad agreement within the PCT implementer and legal community that the field belongs in the core schema. This is assessed through the GitHub Discussions process and, where necessary, a formal comment period. Significant unresolved objections from substantive contributors will prevent promotion regardless of other criteria being met.
+
+**Schema compatibility.** The proposed field must be compatible with the existing core schema and must not create conflicts with existing required or optional fields. Where a promoted field would require changes to the core schema beyond simple addition, those changes must themselves be subject to the full comment process.
+
+### 13.3 Promotion process
+
+Promotion proposals may be submitted by any party, including the original namespace registrant, any implementer, or DPG Labs itself. A promotion proposal must be submitted as a GitHub Issue using the promotion proposal template and must include:
+
+- The namespace prefix and specific field or fields proposed for promotion
+- Evidence satisfying each of the criteria in Section 13.2
+- Proposed core schema field name, type, and description
+- Analysis of any backwards compatibility implications
+- Proposed handling of the existing extension namespace field following promotion (deprecation timeline, mapping guidance)
+
+DPG Labs will review promotion proposals and open a formal 60-day public comment period for each substantive proposal. Following the comment period, DPG Labs will publish a decision with reasons. Accepted promotions will be incorporated into the next major or minor version of the specification as appropriate.
+
+### 13.4 Deprecation of promoted extension fields
+
+Where an extension namespace field is promoted to core, the original extension namespace field does not become invalid immediately. A deprecation period of at least one full version cycle will apply, during which both the core field and the extension field are accepted by conformant verifiers. Implementers are expected to migrate to the core field during this period.
+
+Following the deprecation period, verifiers are no longer required to process the deprecated extension field. The original namespace registration remains active in the registry but is marked as deprecated with a reference to the core field that replaced it.
+
+### 13.5 Fields that will not be promoted
+
+The following categories of field are not eligible for promotion to the core schema regardless of adoption levels:
+
+- Fields addressing obligations that arise under a single national jurisdiction only, where there is no reasonable prospect of that obligation being adopted universally.
+- Fields addressing highly sector-specific obligations with no applicability outside that sector.
+- Fields that duplicate or overlap substantially with existing core fields.
+- Fields submitted by a registrant with a commercial interest in the promotion that have not achieved independent third-party implementation evidence.
 
 ---
 
