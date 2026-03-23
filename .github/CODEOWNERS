@@ -1,0 +1,4 @@
+# Default owners for the PCT specification repository.
+# These users will be requested for review on all PRs.
+
+* @dpglabs/maintainers
