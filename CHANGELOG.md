@@ -29,6 +29,18 @@ This project follows [Semantic Versioning](https://semver.org/) for specificatio
 
 ---
 
+## [0.2-draft.3] — March 2026
+
+**Third draft snapshot of v0.2 for community review.**
+
+### Changed
+
+- Rebranded all references from DPG Labs / dpglabs / thedpg to OPSF (Open Privacy Standards Foundation) (#19)
+- Added GitHub issue/PR templates and CODEOWNERS for public collaboration (#17)
+- Added workflow to notify pct-site on spec releases (#13)
+
+---
+
 ## Upcoming: [0.2]
 
 Proposed for the next version based on public comment period. Issues and PRs welcome via GitHub or info@opsf.org.

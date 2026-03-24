@@ -90,7 +90,7 @@ Draft tags are used to publish snapshots of `develop` for community review befor
 
 - `v0.2-draft.1` — First draft snapshot of v0.2 for community review
 - `v0.2-draft.2` — Revised draft after incorporating feedback
-- `v0.2-draft.3` — Further revision, etc.
+- `v0.2-draft.3` — Rebrand to OPSF, public collaboration infrastructure
 
 Draft tags are created on `develop` (not `main`). They are **retained permanently** as a historical record of what was reviewed — they are not deleted when the final version is released.
 
