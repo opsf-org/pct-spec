@@ -6,6 +6,18 @@ This project follows [Semantic Versioning](https://semver.org/) for specificatio
 
 ---
 
+## [0.2-draft.3] — March 2026
+
+**Third draft snapshot of v0.2 for community review.**
+
+### Changed
+
+- Rebranded all references from DPG Labs / dpglabs / thedpg to OPSF (Open Privacy Standards Foundation) (#19)
+- Added GitHub issue/PR templates and CODEOWNERS for public collaboration (#17)
+- Added workflow to notify pct-site on spec releases (#13)
+
+---
+
 ## [0.1] — March 2026
 
 **Initial draft for public comment.**
@@ -26,18 +38,6 @@ This project follows [Semantic Versioning](https://semver.org/) for specificatio
 - Appendix B: Controlled purpose vocabulary (16 standard terms)
 
 **Authors:** OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)
-
----
-
-## [0.2-draft.3] — March 2026
-
-**Third draft snapshot of v0.2 for community review.**
-
-### Changed
-
-- Rebranded all references from DPG Labs / dpglabs / thedpg to OPSF (Open Privacy Standards Foundation) (#19)
-- Added GitHub issue/PR templates and CODEOWNERS for public collaboration (#17)
-- Added workflow to notify pct-site on spec releases (#13)
 
 ---
 
