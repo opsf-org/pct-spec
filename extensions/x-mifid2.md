@@ -29,4 +29,4 @@
 - `order_record_flag` and `algorithmic_trading_record_flag` added.
 - `client_category` note updated on opt-up/opt-down processes.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

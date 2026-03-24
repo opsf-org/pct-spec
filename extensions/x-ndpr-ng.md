@@ -60,5 +60,5 @@ Section 44 NDPA, not for all organisations.
 ---
 
 *This namespace is reserved for registration by a qualified Nigerian data
-protection law practitioner. Contact registry@pct.thedpg.com to register as
+protection law practitioner. Contact pct@opsf.org to register as
 the owner.*

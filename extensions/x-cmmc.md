@@ -18,4 +18,4 @@ Unclassified Information (CUI).
 | `x-cmmc:assessment_status` | enum | OPTIONAL | CMMC assessment status. Permitted values: `self_assessment`, `c3pao_assessed`, `dib_assessed`, `not_assessed`. |
 | `x-cmmc:assessment_ref` | string (URI) | OPTIONAL | Reference to the CMMC assessment or certification documentation. |
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

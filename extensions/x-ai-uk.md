@@ -61,5 +61,5 @@ review following the Data (Use and Access) Act coming into law on 19 June 2025.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.
-Contact registry@pct.thedpg.com for queries.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).
+Contact pct@opsf.org for queries.*

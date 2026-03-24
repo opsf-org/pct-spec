@@ -22,4 +22,4 @@ CSF and Privacy Framework and is administered by GSA, not NIST.
 | `x-fedramp:impact_level` | enum | OPTIONAL | FedRAMP impact level. Permitted values: `low`, `moderate`, `high`. |
 | `x-fedramp:authorisation_ref` | string (URI) | OPTIONAL | Reference to the FedRAMP Marketplace entry or ATO documentation. |
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

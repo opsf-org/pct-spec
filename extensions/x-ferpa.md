@@ -29,4 +29,4 @@ by the Student Privacy Policy Office (SPPO), US Department of Education.
 - Enforcement body updated to Student Privacy Policy Office (SPPO), not FPCO.
 - `disclosure_basis` enum expanded to include dependent student parent disclosure.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

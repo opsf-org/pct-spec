@@ -58,5 +58,5 @@ contractual clauses for international transfers (Resolution No. 19/2024).
 ---
 
 *This namespace is reserved for registration by a qualified Brazilian data
-protection law practitioner. Contact registry@pct.thedpg.com to register as
+protection law practitioner. Contact pct@opsf.org to register as
 the owner.*

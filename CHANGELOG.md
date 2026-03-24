@@ -25,10 +25,10 @@ This project follows [Semantic Versioning](https://semver.org/) for specificatio
 - Appendix A: Full JSON Schema (Draft 2020-12)
 - Appendix B: Controlled purpose vocabulary (16 standard terms)
 
-**Authors:** DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)
+**Authors:** OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)
 
 ---
 
 ## Upcoming: [0.2]
 
-Proposed for the next version based on public comment period. Issues and PRs welcome via GitHub or pct@dpglabs.io.
+Proposed for the next version based on public comment period. Issues and PRs welcome via GitHub or info@opsf.org.

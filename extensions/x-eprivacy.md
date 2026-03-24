@@ -58,5 +58,5 @@ namespace in the PCT v0.1 specification addresses UK PECR obligations.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.
-Contact registry@pct.thedpg.com for queries.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).
+Contact pct@opsf.org for queries.*

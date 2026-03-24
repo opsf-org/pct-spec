@@ -61,5 +61,5 @@ tier categories. Multiple US states have enacted AI-specific legislation.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.
-Contact registry@pct.thedpg.com for queries.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).
+Contact pct@opsf.org for queries.*

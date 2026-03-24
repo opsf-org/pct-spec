@@ -61,4 +61,4 @@ finalised.
 ---
 
 *This namespace is reserved for registration by a qualified Indian data protection
-law practitioner. Contact registry@pct.thedpg.com to register as the owner.*
+law practitioner. Contact pct@opsf.org to register as the owner.*

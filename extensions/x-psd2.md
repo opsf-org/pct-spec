@@ -53,4 +53,4 @@ updated from 90 to 180 days under RTS Article 36.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

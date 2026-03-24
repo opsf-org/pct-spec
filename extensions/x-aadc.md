@@ -59,4 +59,4 @@ Access) Act coming into law on 19 June 2025.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

@@ -61,5 +61,5 @@ updated through 2024 model risk management and GenAI guardrail work.
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.
-Contact registry@pct.thedpg.com for queries.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).
+Contact pct@opsf.org for queries.*
