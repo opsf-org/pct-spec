@@ -1,4 +1,4 @@
-name: Create Draft Release
+name: Create Release
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 jobs:
-  create-tag:
+  create-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -55,3 +55,57 @@ jobs:
         run: |
           git tag "${{ inputs.tag }}"
           git push origin "${{ inputs.tag }}"
+
+      - name: Determine version and status
+        id: meta
+        run: |
+          TAG="${{ inputs.tag }}"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+          if [[ "${TAG}" == *-draft* ]]; then
+            VERSION="${TAG%%-draft*}"
+            STATUS="draft"
+            PRERELEASE="true"
+            FILENAME="pct-spec-${TAG}.pdf"
+            TITLE="PCT Specification ${TAG} (Draft for Public Comment)"
+          else
+            VERSION="${TAG}"
+            STATUS="release"
+            PRERELEASE="false"
+            FILENAME="pct-spec-${TAG}.pdf"
+            TITLE="PCT Specification ${TAG}"
+          fi
+
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "status=${STATUS}" >> "$GITHUB_OUTPUT"
+          echo "prerelease=${PRERELEASE}" >> "$GITHUB_OUTPUT"
+          echo "filename=${FILENAME}" >> "$GITHUB_OUTPUT"
+          echo "title=${TITLE}" >> "$GITHUB_OUTPUT"
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-fonts-extra \
+            lmodern
+
+      - name: Build PDF
+        run: |
+          make pdf \
+            VERSION="${{ steps.meta.outputs.version }}" \
+            STATUS="${{ steps.meta.outputs.status }}" \
+            OUTPUT="${{ steps.meta.outputs.filename }}"
+
+      - name: Create GitHub Release with PDF
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.meta.outputs.tag }}" \
+            "${{ steps.meta.outputs.filename }}" \
+            --title "${{ steps.meta.outputs.title }}" \
+            --prerelease=${{ steps.meta.outputs.prerelease }} \
+            --generate-notes
