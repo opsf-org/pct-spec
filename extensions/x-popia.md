@@ -53,5 +53,5 @@ how processing must be conducted, not lawful bases in the GDPR sense.
 ---
 
 *This namespace is reserved for registration by a qualified South African data
-protection law practitioner. Contact registry@pct.opsf.org to register as
+protection law practitioner. Contact pct@opsf.org to register as
 the owner.*

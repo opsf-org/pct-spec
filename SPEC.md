@@ -798,7 +798,7 @@ An application to register a namespace must include the following:
 
 ### 12.5 Registration process
 
-Applications are submitted to [registry@opsf.org](mailto:registry@opsf.org) or via the web form at [opsf.org/registry/apply](https://opsf.org/registry/apply).
+Applications are submitted to [pct@opsf.org](mailto:pct@opsf.org) or via the web form at [opsf.org/registry/apply](https://opsf.org/registry/apply).
 
 OPSF (Open Privacy Standards Foundation) will review each application within 14 working days and will either approve the registration, request clarification, or reject the application with reasons. Grounds for rejection include conflict with an existing registration, conflict with the core schema field names, insufficient documentation, or failure to meet the format requirements of Section 12.2.
 

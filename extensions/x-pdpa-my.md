@@ -60,5 +60,5 @@ guidelines implementing these obligations.
 ---
 
 *This namespace is reserved for registration by a qualified Malaysian data
-protection law practitioner. Contact registry@pct.opsf.org to register as
+protection law practitioner. Contact pct@opsf.org to register as
 the owner.*

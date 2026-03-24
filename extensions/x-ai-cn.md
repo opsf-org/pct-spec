@@ -61,4 +61,4 @@ Provisions.
 ---
 
 *This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).
-Contact registry@pct.opsf.org for queries.*
+Contact pct@opsf.org for queries.*

@@ -86,4 +86,4 @@ welcomed via the GitHub Discussions board at github.com/opsf-org/pct-spec or by
 email to pct-spec@opsf.org.*
 
 *This namespace is reserved for registration by a qualified California privacy law
-practitioner. Contact registry@pct.opsf.org to register as the owner.*
+practitioner. Contact pct@opsf.org to register as the owner.*

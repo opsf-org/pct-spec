@@ -7,7 +7,7 @@
   "last_updated": "2026-03-21",
   "registry_authority": {
     "name": "OPSF (Open Privacy Standards Foundation)",
-    "contact": "registry@opsf.org",
+    "contact": "pct@opsf.org",
     "url": "https://opsf.org/registry"
   },
   "namespaces": [
@@ -15,7 +15,7 @@
       "_comment": "=== RESERVED PREFIXES (OPSF core - not available for registration) ===",
       "namespace_prefix": "x-hipaa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Health Insurance Portability and Accountability Act (HIPAA)",
       "jurisdiction": "US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/main/SPEC.md#57-extension-namespaces",
@@ -52,7 +52,7 @@
     {
       "namespace_prefix": "x-dora",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Digital Operational Resilience Act (DORA)",
       "jurisdiction": "EU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/main/SPEC.md#57-extension-namespaces",
@@ -84,7 +84,7 @@
     {
       "namespace_prefix": "x-duaa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "UK Data Use and Access Act (DUAA)",
       "jurisdiction": "GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/main/SPEC.md#57-extension-namespaces",
@@ -111,7 +111,7 @@
     {
       "namespace_prefix": "x-pecr",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Privacy and Electronic Communications Regulations (PECR)",
       "jurisdiction": "GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/main/SPEC.md#57-extension-namespaces",
@@ -143,7 +143,7 @@
     {
       "namespace_prefix": "x-ai-act",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "EU Artificial Intelligence Act",
       "jurisdiction": "EU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/main/SPEC.md#57-extension-namespaces",
@@ -186,7 +186,7 @@
       "_comment": "=== TRACK 1: OPSF REGISTERED - SECTOR SPECIFIC (Wave 3) ===",
       "namespace_prefix": "x-psd2",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Payment Services Directive 2 (PSD2) / UK Payment Services Regulations 2017",
       "jurisdiction": "EU, GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-psd2.md",
@@ -201,7 +201,7 @@
     {
       "namespace_prefix": "x-mifid2",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Markets in Financial Instruments Directive II (MiFID II / MiFIR)",
       "jurisdiction": "EU, GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-mifid2.md",
@@ -216,7 +216,7 @@
     {
       "namespace_prefix": "x-coppa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Children's Online Privacy Protection Act (COPPA)",
       "jurisdiction": "US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-coppa.md",
@@ -231,7 +231,7 @@
     {
       "namespace_prefix": "x-aadc",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "UK Age Appropriate Design Code (Children's Code)",
       "jurisdiction": "GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-aadc.md",
@@ -246,7 +246,7 @@
     {
       "namespace_prefix": "x-ferpa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Family Educational Rights and Privacy Act (FERPA)",
       "jurisdiction": "US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ferpa.md",
@@ -261,7 +261,7 @@
     {
       "namespace_prefix": "x-eu-ctr",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "EU Clinical Trials Regulation (CTR, Regulation EU 536/2014)",
       "jurisdiction": "EU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-eu-ctr.md",
@@ -276,7 +276,7 @@
     {
       "namespace_prefix": "x-nist-csf",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "NIST Cybersecurity Framework 2.0 (2024)",
       "jurisdiction": "US (global applicability)",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-nist-csf.md",
@@ -293,7 +293,7 @@
       "_comment": "=== TRACK 1: OPSF REGISTERED - ADDITIONAL SECTOR SPECIFIC (Wave 8) ===",
       "namespace_prefix": "x-eprivacy",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "EU ePrivacy Directive (2002/58/EC as amended) / proposed ePrivacy Regulation",
       "jurisdiction": "EU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-eprivacy.md",
@@ -308,7 +308,7 @@
     {
       "namespace_prefix": "x-telecom",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Telecommunications Sector Data Obligations (multi-jurisdictional)",
       "jurisdiction": "Multi-jurisdictional",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-telecom.md",
@@ -323,7 +323,7 @@
     {
       "namespace_prefix": "x-insurance",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Insurance Sector Data Obligations (Solvency II, IDD, NAIC model laws)",
       "jurisdiction": "EU, GB, US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-insurance.md",
@@ -338,7 +338,7 @@
     {
       "namespace_prefix": "x-iot",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Internet of Things and Connected Devices (EU CRA, UK PSTI Act, US IoT Cybersecurity Improvement Act)",
       "jurisdiction": "EU, GB, US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-iot.md",
@@ -353,7 +353,7 @@
     {
       "namespace_prefix": "x-biometrics",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Biometric Data Processing (GDPR Article 9, Illinois BIPA, Texas CUBI, and equivalent)",
       "jurisdiction": "EU, GB, US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-biometrics.md",
@@ -368,7 +368,7 @@
     {
       "namespace_prefix": "x-direct-marketing",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Direct Marketing Obligations (GDPR Art 21, CAN-SPAM, TCPA, CASL, Australia Spam Act)",
       "jurisdiction": "EU, GB, US, CA, AU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-direct-marketing.md",
@@ -384,7 +384,7 @@
       "_comment": "=== TRACK 1: OPSF REGISTERED - AI GOVERNANCE (Wave 9) ===",
       "namespace_prefix": "x-ai-uk",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "UK AI Governance Framework (ICO AI guidance, DRCF principles, AISI)",
       "jurisdiction": "GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-uk.md",
@@ -399,7 +399,7 @@
     {
       "namespace_prefix": "x-ai-us-fed",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "US Federal AI Governance (NIST AI RMF, OMB M-25-21, M-25-22)",
       "jurisdiction": "US",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-us-fed.md",
@@ -415,7 +415,7 @@
     {
       "namespace_prefix": "x-ai-cn",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "China AI Governance Regulations (Deep Synthesis, Generative AI, Algorithm Recommendations)",
       "jurisdiction": "CN",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-cn.md",
@@ -430,7 +430,7 @@
     {
       "namespace_prefix": "x-ai-ca",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Canada AI Governance (AIDA, Directive on Automated Decision-Making, OPC AI guidance)",
       "jurisdiction": "CA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-ca.md",
@@ -445,7 +445,7 @@
     {
       "namespace_prefix": "x-ai-sg",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Singapore Model AI Governance Framework, AI Verify, MAS FEAT Principles",
       "jurisdiction": "SG",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-sg.md",
@@ -460,7 +460,7 @@
     {
       "namespace_prefix": "x-ai-int",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "International AI Governance (UNESCO, OECD, G7 Hiroshima, Council of Europe CETS 225, ISO/IEC 42001)",
       "jurisdiction": "Multi-jurisdictional",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ai-int.md",
@@ -476,7 +476,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 1 - Americas and Africa) ===",
       "namespace_prefix": "x-ccpa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "California Consumer Privacy Act / California Privacy Rights Act (CCPA/CPRA)",
       "jurisdiction": "US-CA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ccpa.md",
@@ -485,7 +485,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified California privacy law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified California privacy law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -493,7 +493,7 @@
     {
       "namespace_prefix": "x-lgpd",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Lei Geral de Prote\u00e7\u00e3o de Dados (LGPD, Brazil)",
       "jurisdiction": "BR",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lgpd.md",
@@ -502,7 +502,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Brazilian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Brazilian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -510,7 +510,7 @@
     {
       "namespace_prefix": "x-pdpa-th",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Act (PDPA, Thailand)",
       "jurisdiction": "TH",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpa-th.md",
@@ -519,7 +519,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Thai data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Thai data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -527,7 +527,7 @@
     {
       "namespace_prefix": "x-pdpb-in",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Digital Personal Data Protection Act 2023 (DPDP Act, India)",
       "jurisdiction": "IN",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpb-in.md",
@@ -536,7 +536,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Indian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Indian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -544,7 +544,7 @@
     {
       "namespace_prefix": "x-popia",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Protection of Personal Information Act (POPIA, South Africa)",
       "jurisdiction": "ZA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-popia.md",
@@ -553,7 +553,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified South African data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified South African data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -561,7 +561,7 @@
     {
       "namespace_prefix": "x-pipeda",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "PIPEDA and provincial privacy laws including Quebec Law 25 (Canada)",
       "jurisdiction": "CA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pipeda.md",
@@ -570,7 +570,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Canadian privacy law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Canadian privacy law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -579,7 +579,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 2 - Asia-Pacific) ===",
       "namespace_prefix": "x-pdpa-sg",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Act (PDPA, Singapore)",
       "jurisdiction": "SG",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpa-sg.md",
@@ -588,7 +588,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Singapore data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Singapore data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -596,7 +596,7 @@
     {
       "namespace_prefix": "x-pipa-kr",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Information Protection Act (PIPA, South Korea)",
       "jurisdiction": "KR",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pipa-kr.md",
@@ -605,7 +605,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified South Korean data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified South Korean data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -613,7 +613,7 @@
     {
       "namespace_prefix": "x-appi-jp",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Act on the Protection of Personal Information (APPI, Japan)",
       "jurisdiction": "JP",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-appi-jp.md",
@@ -622,7 +622,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Japanese data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Japanese data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -630,7 +630,7 @@
     {
       "namespace_prefix": "x-privacy-au",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Privacy Act 1988 (Cth) incorporating Australian Privacy Principles",
       "jurisdiction": "AU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-privacy-au.md",
@@ -639,7 +639,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Australian privacy law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Australian privacy law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -647,7 +647,7 @@
     {
       "namespace_prefix": "x-pdpo-hk",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data (Privacy) Ordinance (PDPO, Hong Kong)",
       "jurisdiction": "HK",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpo-hk.md",
@@ -656,7 +656,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Hong Kong data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Hong Kong data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -664,7 +664,7 @@
     {
       "namespace_prefix": "x-pipl-cn",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Information Protection Law (PIPL, China)",
       "jurisdiction": "CN",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pipl-cn.md",
@@ -673,7 +673,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Chinese data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Chinese data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -682,7 +682,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 4 - Middle East and Gulf) ===",
       "namespace_prefix": "x-pdpl-uae",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Federal Personal Data Protection Law (PDPL, UAE mainland)",
       "jurisdiction": "AE",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpl-uae.md",
@@ -691,7 +691,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified UAE data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified UAE data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -699,7 +699,7 @@
     {
       "namespace_prefix": "x-difc-dp",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "DIFC Data Protection Law (DIFC Law No. 5 of 2020)",
       "jurisdiction": "AE-DIFC",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-difc-dp.md",
@@ -708,7 +708,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified DIFC data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified DIFC data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -716,7 +716,7 @@
     {
       "namespace_prefix": "x-adgm-dp",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "ADGM Data Protection Regulations 2021",
       "jurisdiction": "AE-ADGM",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-adgm-dp.md",
@@ -725,7 +725,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified ADGM data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified ADGM data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed_accurate",
       "review_date": "2026-03-20"
@@ -733,7 +733,7 @@
     {
       "namespace_prefix": "x-pdpl-sa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Law (PDPL, Saudi Arabia)",
       "jurisdiction": "SA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpl-sa.md",
@@ -742,7 +742,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Saudi Arabian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Saudi Arabian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -750,7 +750,7 @@
     {
       "namespace_prefix": "x-pdpl-qa",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Privacy Law No. 13 of 2016 (Qatar)",
       "jurisdiction": "QA",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpl-qa.md",
@@ -759,7 +759,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Qatari data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Qatari data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -767,7 +767,7 @@
     {
       "namespace_prefix": "x-qfc-dp",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Qatar Financial Centre Data Protection Regulations 2021",
       "jurisdiction": "QA-QFC",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-qfc-dp.md",
@@ -776,7 +776,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified QFC data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified QFC data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed_accurate",
       "review_date": "2026-03-20"
@@ -784,7 +784,7 @@
     {
       "namespace_prefix": "x-pdpl-bh",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Law (PDPL, Bahrain)",
       "jurisdiction": "BH",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpl-bh.md",
@@ -793,7 +793,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Bahraini data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Bahraini data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -801,7 +801,7 @@
     {
       "namespace_prefix": "x-pdp-tr",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Law No. 6698 (KVKK, Turkey)",
       "jurisdiction": "TR",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-tr.md",
@@ -810,7 +810,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Turkish data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Turkish data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -819,7 +819,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 5 - Africa) ===",
       "namespace_prefix": "x-dpa-ke",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Data Protection Act No. 24 of 2019 (Kenya)",
       "jurisdiction": "KE",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-dpa-ke.md",
@@ -828,7 +828,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Kenyan data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Kenyan data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -836,7 +836,7 @@
     {
       "namespace_prefix": "x-ndpr-ng",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Nigeria Data Protection Act 2023 (NDPA)",
       "jurisdiction": "NG",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-ndpr-ng.md",
@@ -845,7 +845,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Nigerian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Nigerian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -853,7 +853,7 @@
     {
       "namespace_prefix": "x-dpa-gh",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Data Protection Act 2012 (Act 843, Ghana)",
       "jurisdiction": "GH",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-dpa-gh.md",
@@ -862,7 +862,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Ghanaian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Ghanaian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -870,7 +870,7 @@
     {
       "namespace_prefix": "x-pdp-tz",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Act 2022 (Tanzania)",
       "jurisdiction": "TZ",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-tz.md",
@@ -879,7 +879,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Tanzanian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Tanzanian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -887,7 +887,7 @@
     {
       "namespace_prefix": "x-pdp-rw",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Law No. 058/2021 on Personal Data Protection and Privacy (Rwanda)",
       "jurisdiction": "RW",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-rw.md",
@@ -896,7 +896,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Rwandan data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Rwandan data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -904,7 +904,7 @@
     {
       "namespace_prefix": "x-dpo-eg",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Law No. 151 of 2020 (Egypt)",
       "jurisdiction": "EG",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-dpo-eg.md",
@@ -913,7 +913,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Egyptian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Egyptian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -922,7 +922,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 6 - Latin America) ===",
       "namespace_prefix": "x-lfpdppp-mx",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP, Mexico)",
       "jurisdiction": "MX",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lfpdppp-mx.md",
@@ -931,7 +931,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Mexican data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Mexican data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -939,7 +939,7 @@
     {
       "namespace_prefix": "x-lpdp-co",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Statutory Law 1581 of 2012 on Personal Data Protection (Colombia)",
       "jurisdiction": "CO",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lpdp-co.md",
@@ -948,7 +948,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Colombian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Colombian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -956,7 +956,7 @@
     {
       "namespace_prefix": "x-pdp-ar",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Law No. 25,326 on Personal Data Protection (Argentina)",
       "jurisdiction": "AR",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-ar.md",
@@ -965,7 +965,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Argentine data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Argentine data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -973,7 +973,7 @@
     {
       "namespace_prefix": "x-lpdp-cl",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Law (LPDP, Chile, 2024 reform)",
       "jurisdiction": "CL",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lpdp-cl.md",
@@ -982,7 +982,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Chilean data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Chilean data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -990,7 +990,7 @@
     {
       "namespace_prefix": "x-lpdp-pe",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Law No. 29733 on Personal Data Protection (Peru)",
       "jurisdiction": "PE",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lpdp-pe.md",
@@ -999,7 +999,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Peruvian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Peruvian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1007,7 +1007,7 @@
     {
       "namespace_prefix": "x-lgpd-ec",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Organic Law on Personal Data Protection (LOPDP, Ecuador)",
       "jurisdiction": "EC",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-lgpd-ec.md",
@@ -1016,7 +1016,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Ecuadorian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Ecuadorian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1025,7 +1025,7 @@
       "_comment": "=== TRACK 2: RESERVED - OPEN FOR CONTRIBUTOR REGISTRATION (Wave 7 - Southeast Asia and Oceania) ===",
       "namespace_prefix": "x-pdp-id",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Law No. 27 of 2022 on Personal Data Protection (UU PDP, Indonesia)",
       "jurisdiction": "ID",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-id.md",
@@ -1034,7 +1034,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Indonesian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Indonesian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1042,7 +1042,7 @@
     {
       "namespace_prefix": "x-pdp-vn",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Decree No. 13/2023/ND-CP on Personal Data Protection (Vietnam)",
       "jurisdiction": "VN",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdp-vn.md",
@@ -1051,7 +1051,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Vietnamese data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Vietnamese data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1059,7 +1059,7 @@
     {
       "namespace_prefix": "x-dpa-ph",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Data Privacy Act of 2012 (Republic Act No. 10173, Philippines)",
       "jurisdiction": "PH",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-dpa-ph.md",
@@ -1068,7 +1068,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Philippine data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Philippine data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1076,7 +1076,7 @@
     {
       "namespace_prefix": "x-pdpa-my",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Personal Data Protection Act 2010 (PDPA, Malaysia)",
       "jurisdiction": "MY",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-pdpa-my.md",
@@ -1085,7 +1085,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified Malaysian data protection law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified Malaysian data protection law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1093,7 +1093,7 @@
     {
       "namespace_prefix": "x-privacy-nz",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Privacy Act 2020 (New Zealand)",
       "jurisdiction": "NZ",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-privacy-nz.md",
@@ -1102,7 +1102,7 @@
       "registration_date": "2026-03-21",
       "status": "reserved",
       "reserved_for_contributor": true,
-      "contributor_note": "This namespace is reserved for registration by a qualified New Zealand privacy law practitioner. Contact registry@opsf.org to register as the owner of this namespace.",
+      "contributor_note": "This namespace is reserved for registration by a qualified New Zealand privacy law practitioner. Contact pct@opsf.org to register as the owner of this namespace.",
       "source": "PCT Specification v0.2 proposed",
       "review_status": "ai_reviewed",
       "review_date": "2026-03-20"
@@ -1110,7 +1110,7 @@
     {
       "namespace_prefix": "x-nist-pf",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "NIST Privacy Framework Version 1.0 (2020)",
       "jurisdiction": "US (global voluntary use)",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-nist-pf.md",
@@ -1125,7 +1125,7 @@
     {
       "namespace_prefix": "x-fedramp",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "FedRAMP (Federal Risk and Authorization Management Program)",
       "jurisdiction": "US \u2014 Federal Government",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-fedramp.md",
@@ -1140,7 +1140,7 @@
     {
       "namespace_prefix": "x-cmmc",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "Cybersecurity Maturity Model Certification (32 CFR Part 170)",
       "jurisdiction": "US \u2014 DoD contractors",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-cmmc.md",
@@ -1155,7 +1155,7 @@
     {
       "namespace_prefix": "x-dpa-le",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "UK Data Protection Act 2018 Part 3 \u2014 Law Enforcement Processing",
       "jurisdiction": "GB",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-dpa-le.md",
@@ -1170,7 +1170,7 @@
     {
       "namespace_prefix": "x-gdpr-national",
       "registrant_name": "OPSF (Open Privacy Standards Foundation)",
-      "registrant_contact": "registry@opsf.org",
+      "registrant_contact": "pct@opsf.org",
       "regulatory_framework": "GDPR national derogations and member state implementing provisions",
       "jurisdiction": "EU",
       "documentation_url": "https://github.com/opsf-org/pct-spec/blob/v0.2-draft/extensions/x-gdpr-national.md",

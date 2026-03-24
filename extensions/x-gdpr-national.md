@@ -72,4 +72,4 @@ baseline. This namespace is particularly important for:
 ---
 
 *This namespace is maintained by OPSF (Open Privacy Standards Foundation) as part of
-the PCT specification project. Contact registry@pct.opsf.org for queries.*
+the PCT specification project. Contact pct@opsf.org for queries.*

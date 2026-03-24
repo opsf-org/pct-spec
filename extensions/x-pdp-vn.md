@@ -55,5 +55,5 @@ the Cybersecurity Law rather than from the PDPD itself.
 ---
 
 *This namespace is reserved for registration by a qualified Vietnamese data
-protection law practitioner. Contact registry@pct.opsf.org to register as
+protection law practitioner. Contact pct@opsf.org to register as
 the owner.*
