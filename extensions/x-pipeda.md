@@ -62,4 +62,4 @@ expectations.
 ---
 
 *This namespace is reserved for registration by a qualified Canadian privacy law
-practitioner. Contact registry@pct.thedpg.com to register as the owner.*
+practitioner. Contact registry@pct.opsf.org to register as the owner.*

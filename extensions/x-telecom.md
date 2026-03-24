@@ -31,4 +31,4 @@ and 9 for EU traffic/location data distinctions.
 - `cpni_flag` description updated to reference FCC authentication and certification requirements.
 - `data_retention_obligation_flag` note updated reflecting CJEU case law constraint on EU mandates.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

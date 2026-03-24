@@ -82,8 +82,8 @@ A verifier processing a PCT containing `x-ccpa:` namespace fields must:
 *This namespace definition is proposed for inclusion in PCT Specification v0.2.
 It has been through an AI-assisted legal review but has not yet been reviewed by
 a qualified California privacy law practitioner. Comments and corrections are
-welcomed via the GitHub Discussions board at github.com/dpg-labs/pct-spec or by
-email to pct-spec@thedpg.com.*
+welcomed via the GitHub Discussions board at github.com/opsf-org/pct-spec or by
+email to pct-spec@opsf.org.*
 
 *This namespace is reserved for registration by a qualified California privacy law
-practitioner. Contact registry@pct.thedpg.com to register as the owner.*
+practitioner. Contact registry@pct.opsf.org to register as the owner.*

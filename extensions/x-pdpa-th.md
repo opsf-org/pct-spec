@@ -54,4 +54,4 @@ appointment, and cross-border transfer mechanisms including binding corporate ru
 ---
 
 *This namespace is reserved for registration by a qualified Thai data protection
-law practitioner. Contact registry@pct.thedpg.com to register as the owner.*
+law practitioner. Contact registry@pct.opsf.org to register as the owner.*

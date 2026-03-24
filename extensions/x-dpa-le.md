@@ -63,5 +63,5 @@ Do not use this namespace for general law enforcement-related processing by non-
 
 ---
 
-*This namespace is maintained by DPG Labs / The Data Privacy Group as part of
-the PCT specification project. Contact registry@pct.thedpg.com for queries.*
+*This namespace is maintained by OPSF (Open Privacy Standards Foundation) as part of
+the PCT specification project. Contact registry@pct.opsf.org for queries.*

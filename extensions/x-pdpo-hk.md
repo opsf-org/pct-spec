@@ -61,5 +61,5 @@ third party's direct marketing, with different requirements and criminal sanctio
 ---
 
 *This namespace is reserved for registration by a qualified Hong Kong data
-protection law practitioner. Contact registry@pct.thedpg.com to register as
+protection law practitioner. Contact registry@pct.opsf.org to register as
 the owner.*

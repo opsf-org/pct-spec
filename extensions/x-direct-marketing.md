@@ -32,4 +32,4 @@ rules; Canada CASL; Australia Spam Act 2003.
 - `consent_basis` (single cross-jurisdiction enum) removed: replaced by jurisdiction-specific fields.
 - `sender_identification_flag` added covering CAN-SPAM, CASL, and Spam Act identification duties.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

@@ -4,7 +4,7 @@
 
 March 2026
 
-**Specification authors:** DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)
+**Specification authors:** OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)
 
 ---
 
@@ -581,7 +581,7 @@ This example shows a PCT that would result in an ALLOW decision for a clinical a
   "issued_at": 1743000000,
   "valid_from": 1743000000,
   "expires_at": 1774536000,
-  "issuer": "https://orchestrator.dpglabs.io",
+  "issuer": "https://orchestrator.opsf.org",
   "subject_id": "dataset:patient-cohort-2026-03",
   "subject_type": "ai_interaction",
   "data_origin": "GB",
@@ -744,7 +744,7 @@ Where the lawful basis is consent, a PCT issued on the basis of consent becomes 
 
 ### 12.1 Purpose and authority
 
-The PCT Namespace Registry is the authoritative record of all registered extension namespace prefixes in the PCT ecosystem. It is maintained by DPG Labs as the authoring organisation of this specification.
+The PCT Namespace Registry is the authoritative record of all registered extension namespace prefixes in the PCT ecosystem. It is maintained by OPSF (Open Privacy Standards Foundation) as the authoring organisation of this specification.
 
 The registry exists to prevent namespace collisions, establish clear ownership and accountability for each namespace, and ensure that verifiers and implementers can identify the authoritative definition of any extension claim they encounter. Without a registry, two organisations could independently define `x-fintech:` with conflicting semantics, creating ambiguity that undermines the reliability of PCT verification.
 
@@ -760,7 +760,7 @@ x-{label}:
 
 Where `{label}` is a short, lowercase, alphanumeric identifier with no spaces or special characters other than hyphens. Examples: `x-ccpa:`, `x-lgpd:`, `x-uk-nhs:`, `x-psd2:`.
 
-The following prefixes are reserved by DPG Labs and may not be registered by third parties:
+The following prefixes are reserved by OPSF (Open Privacy Standards Foundation) and may not be registered by third parties:
 
 - `x-hipaa:`
 - `x-dora:`
@@ -777,7 +777,7 @@ The registry operates on two tiers.
 
 **Tier 2 — Commercial Registration.** Required for commercial organisations registering namespaces for use in products or services. Tier 2 registrations carry an annual registration fee, are listed in the public registry with full documentation, and are eligible for community review and promotion to core. Commercial registrants receive a verified badge in the registry.
 
-Fee structures for Tier 2 registration are published separately at [pct.thedpg.com/registry](https://pct.thedpg.com/registry) and are reviewed annually.
+Fee structures for Tier 2 registration are published separately at [opsf.org/registry](https://opsf.org/registry) and are reviewed annually.
 
 ### 12.4 Registration requirements
 
@@ -798,26 +798,26 @@ An application to register a namespace must include the following:
 
 ### 12.5 Registration process
 
-Applications are submitted to [registry@pct.thedpg.com](mailto:registry@pct.thedpg.com) or via the web form at [pct.thedpg.com/registry/apply](https://pct.thedpg.com/registry/apply).
+Applications are submitted to [registry@opsf.org](mailto:registry@opsf.org) or via the web form at [opsf.org/registry/apply](https://opsf.org/registry/apply).
 
-DPG Labs will review each application within 14 working days and will either approve the registration, request clarification, or reject the application with reasons. Grounds for rejection include conflict with an existing registration, conflict with the core schema field names, insufficient documentation, or failure to meet the format requirements of Section 12.2.
+OPSF (Open Privacy Standards Foundation) will review each application within 14 working days and will either approve the registration, request clarification, or reject the application with reasons. Grounds for rejection include conflict with an existing registration, conflict with the core schema field names, insufficient documentation, or failure to meet the format requirements of Section 12.2.
 
-Approved registrations are published in the PCT Namespace Registry within 5 working days of approval. The registry is publicly available at [pct.thedpg.com/registry](https://pct.thedpg.com/registry) and is also published as a machine-readable JSON file in the PCT specification GitHub repository at `registry/namespaces.json`.
+Approved registrations are published in the PCT Namespace Registry within 5 working days of approval. The registry is publicly available at [opsf.org/registry](https://opsf.org/registry) and is also published as a machine-readable JSON file in the PCT specification GitHub repository at `registry/namespaces.json`.
 
 ### 12.6 Registrant obligations
 
 Registrants are responsible for:
 
 - Maintaining the accuracy of the documentation at the registered `documentation_url`.
-- Notifying DPG Labs of any material changes to the namespace definition by submitting an updated registration.
+- Notifying OPSF (Open Privacy Standards Foundation) of any material changes to the namespace definition by submitting an updated registration.
 - Renewing commercial registrations annually and maintaining payment of applicable fees.
 - Ensuring that implementations of their namespace are consistent with the registered field definitions.
 
-DPG Labs reserves the right to suspend or revoke a registration where a registrant fails to meet these obligations, where the namespace is found to conflict with the core schema, or where the registered documentation is found to be materially misleading.
+OPSF (Open Privacy Standards Foundation) reserves the right to suspend or revoke a registration where a registrant fails to meet these obligations, where the namespace is found to conflict with the core schema, or where the registered documentation is found to be materially misleading.
 
 ### 12.7 Dispute resolution
 
-Where two parties claim entitlement to the same namespace prefix, DPG Labs will adjudicate based on the date of application, the quality and completeness of the documentation, and the legitimacy of the claimed regulatory basis. DPG Labs' decision is final. Parties may appeal in writing within 30 days of a decision.
+Where two parties claim entitlement to the same namespace prefix, OPSF (Open Privacy Standards Foundation) will adjudicate based on the date of application, the quality and completeness of the documentation, and the legitimacy of the claimed regulatory basis. OPSF (Open Privacy Standards Foundation)'s decision is final. Parties may appeal in writing within 30 days of a decision.
 
 ### 12.8 The registry record format
 
@@ -876,7 +876,7 @@ An extension namespace field or set of fields may be considered for promotion to
 
 ### 13.3 Promotion process
 
-Promotion proposals may be submitted by any party, including the original namespace registrant, any implementer, or DPG Labs itself. A promotion proposal must be submitted as a GitHub Issue using the promotion proposal template and must include:
+Promotion proposals may be submitted by any party, including the original namespace registrant, any implementer, or OPSF (Open Privacy Standards Foundation) itself. A promotion proposal must be submitted as a GitHub Issue using the promotion proposal template and must include:
 
 - The namespace prefix and specific field or fields proposed for promotion
 - Evidence satisfying each of the criteria in Section 13.2
@@ -884,7 +884,7 @@ Promotion proposals may be submitted by any party, including the original namesp
 - Analysis of any backwards compatibility implications
 - Proposed handling of the existing extension namespace field following promotion (deprecation timeline, mapping guidance)
 
-DPG Labs will review promotion proposals and open a formal 60-day public comment period for each substantive proposal. Following the comment period, DPG Labs will publish a decision with reasons. Accepted promotions will be incorporated into the next major or minor version of the specification as appropriate.
+OPSF (Open Privacy Standards Foundation) will review promotion proposals and open a formal 60-day public comment period for each substantive proposal. Following the comment period, OPSF (Open Privacy Standards Foundation) will publish a decision with reasons. Accepted promotions will be incorporated into the next major or minor version of the specification as appropriate.
 
 ### 13.4 Deprecation of promoted extension fields
 
@@ -910,7 +910,7 @@ The following JSON Schema (Draft 2020-12) defines the complete structure of a PC
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://pct.dpglabs.io/schema/0.1/pct.json",
+  "$id": "https://pct.opsf.org/schema/0.1/pct.json",
   "title": "Privacy Claims Token",
   "type": "object",
   "required": [
@@ -1003,16 +1003,16 @@ The following values are defined as the standard controlled vocabulary for the `
 
 | Version | Date | Notes |
 |---------|------|-------|
-| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, data binding and integrity verification, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The DPG. |
+| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, data binding and integrity verification, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by OPSF (Open Privacy Standards Foundation). |
 
 ---
 
 Comments, corrections, and proposed extensions for version 0.2 should be submitted to:
 
-**pct@dpglabs.io**
+**info@opsf.org**
 
-[github.com/dpglabs/pct-spec](https://github.com/dpglabs/pct-spec)
+[github.com/opsf-org/pct-spec](https://github.com/opsf-org/pct-spec)
 
 ---
 
-*Privacy Claims Token Specification v0.1 · Released under CC BY 4.0 · DPG Labs · [dpglabs.io](https://dpglabs.io)*
+*Privacy Claims Token Specification v0.1 · Released under CC BY 4.0 · OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)*

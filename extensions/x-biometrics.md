@@ -34,4 +34,4 @@ but is not a general biometric processing law equivalent to BIPA or CUBI.
 - Washington MHMDA framing updated: it is not a general biometric law.
 - BIPA Public Act 103-0769 noted for remedy structure changes.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

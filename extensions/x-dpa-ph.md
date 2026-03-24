@@ -60,5 +60,5 @@ or whose processing is likely to pose a risk to data subject rights.
 ---
 
 *This namespace is reserved for registration by a qualified Philippine data
-protection law practitioner. Contact registry@pct.thedpg.com to register as
+protection law practitioner. Contact registry@pct.opsf.org to register as
 the owner.*

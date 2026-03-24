@@ -31,4 +31,4 @@ instruments do not create a single harmonised insurance data regime.
 - `consumer_health_info_flag` added replacing generic sensitive health flag.
 - `fraud_prevention_sharing_ref` replaces jurisdiction-specific `fraud_database_flag`.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

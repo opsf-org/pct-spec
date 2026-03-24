@@ -56,4 +56,4 @@ the CTR clinical obligations and the applicable GDPR processing basis separately
 
 ---
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*

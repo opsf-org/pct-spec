@@ -33,4 +33,4 @@ Regulations 2023 (in force 29 April 2024); US IoT Cybersecurity Improvement Act
 - `security_update_support_end_date` added.
 - `data_minimisation_assessment_ref` note updated: obligation comes from privacy law, not IoT-specific instruments.
 
-*This namespace is registered and maintained by DPG Labs / The Data Privacy Group.*
+*This namespace is registered and maintained by OPSF (Open Privacy Standards Foundation).*
