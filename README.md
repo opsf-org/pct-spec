@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Privacy Claims Token — An open standard for portable, cryptographically signed data obligation tokens." width="100%">
+</p>
+
 # Privacy Claims Token (PCT) — Open Specification
 
 **Version 0.1 · Draft for Public Comment · March 2026**
