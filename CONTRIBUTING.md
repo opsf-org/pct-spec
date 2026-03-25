@@ -33,7 +33,7 @@ For **substantive changes to the core specification** — new required fields, c
 
 If you prefer not to use GitHub, comments may be submitted by email to:
 
-**pct@dpglabs.io**
+**info@opsf.org**
 
 Please include the section number and a clear description of your comment or proposed change. Email submissions will be reviewed and, where appropriate, converted to GitHub Issues for tracking.
 
@@ -99,4 +99,4 @@ This project follows a simple standard: be respectful, be constructive, and focu
 
 ---
 
-*DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)*
+*OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)*

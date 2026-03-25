@@ -6,7 +6,7 @@
   "pct": {
     "header": {
       "alg": "RS256",
-      "kid": "dpg-labs-key-2026-03",
+      "kid": "pct-key-2026-03",
       "typ": "PCT",
       "pct_version": "0.1"
     },
@@ -15,7 +15,7 @@
       "issued_at": 1743000000,
       "valid_from": 1743000000,
       "expires_at": 1774536000,
-      "issuer": "https://orchestrator.dpglabs.io",
+      "issuer": "https://orchestrator.opsf.org",
       "subject_id": "dataset:clinical-trial-protocol-A-2026",
       "subject_type": "ai_interaction",
       "data_origin": "DE",

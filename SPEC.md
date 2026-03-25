@@ -4,7 +4,7 @@
 
 March 2026
 
-**Specification authors:** DPG Labs · The DPG · [dpglabs.io](https://dpglabs.io)
+**Specification authors:** OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)
 
 ---
 
@@ -566,7 +566,7 @@ This example shows a PCT that would result in an ALLOW decision for a clinical a
   "issued_at": 1743000000,
   "valid_from": 1743000000,
   "expires_at": 1774536000,
-  "issuer": "https://orchestrator.dpglabs.io",
+  "issuer": "https://orchestrator.opsf.org",
   "subject_id": "dataset:patient-cohort-2026-03",
   "subject_type": "ai_interaction",
   "data_origin": "GB",
@@ -732,7 +732,7 @@ The following JSON Schema (Draft 2020-12) defines the complete structure of a PC
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://pct.dpglabs.io/schema/0.1/pct.json",
+  "$id": "https://pct.opsf.org/schema/0.1/pct.json",
   "title": "Privacy Claims Token",
   "type": "object",
   "required": [
@@ -825,16 +825,16 @@ The following values are defined as the standard controlled vocabulary for the `
 
 | Version | Date | Notes |
 |---------|------|-------|
-| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, data binding and integrity verification, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by DPG Labs / The DPG. |
+| **0.1** | March 2026 | Initial draft for public comment. Core schema, lifecycle, signing model, data binding and integrity verification, enforcement API, audit record, four regulatory extension namespaces, example scenarios, and JSON Schema appendix. Authored by OPSF (Open Privacy Standards Foundation). |
 
 ---
 
 Comments, corrections, and proposed extensions for version 0.2 should be submitted to:
 
-**pct@dpglabs.io**
+**info@opsf.org**
 
-[github.com/dpglabs/pct-spec](https://github.com/dpglabs/pct-spec)
+[github.com/opsf-org/pct-spec](https://github.com/opsf-org/pct-spec)
 
 ---
 
-*Privacy Claims Token Specification v0.1 · Released under CC BY 4.0 · DPG Labs · [dpglabs.io](https://dpglabs.io)*
+*Privacy Claims Token Specification v0.1 · Released under CC BY 4.0 · OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)*

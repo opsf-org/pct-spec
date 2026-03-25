@@ -136,7 +136,7 @@ This is a draft for public comment. Contributions of all kinds are welcome:
 
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for details, or open an issue.
 
-**Comment by email:** pct@dpglabs.io
+**Comment by email:** info@opsf.org
 
 ---
 
@@ -150,9 +150,9 @@ Anyone may implement, extend, or build upon it freely, provided attribution is g
 
 ## Authors
 
-**DPG Labs · The DPG**
+**OPSF (Open Privacy Standards Foundation)**
 
-[dpglabs.io](https://dpglabs.io)
+[opsf.org](https://opsf.org)
 
 ---
 
