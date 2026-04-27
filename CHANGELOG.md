@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Privacy Claims Token specification will be documented here.
+All notable changes to the Proof Claims Token specification will be documented here.
 
 This project follows [Semantic Versioning](https://semver.org/) for specification versions.
 
