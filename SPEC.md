@@ -1,4 +1,4 @@
-# Privacy Claims Token (PCT) — Open Specification
+# Proof Claims Token (PCT) — Open Specification
 
 **Version 0.2 · Draft for Public Comment**
 
@@ -16,7 +16,7 @@ This specification is released under the Creative Commons Attribution 4.0 Intern
 
 ## Abstract
 
-The Privacy Claims Token (PCT) specification defines an open, portable format for expressing, signing, and verifying the data obligations that govern how a dataset may be lawfully processed, transferred, or used. A PCT is a structured, cryptographically signed object — inspired by the JSON Web Token (JWT) model — that travels with data through systems and pipelines, enabling any participating system to verify compliance before any action is permitted.
+The Proof Claims Token (PCT) specification defines an open, portable format for expressing, signing, and verifying the data obligations that govern how a dataset may be lawfully processed, transferred, or used. A PCT is a structured, cryptographically signed object — inspired by the JSON Web Token (JWT) model — that travels with data through systems and pipelines, enabling any participating system to verify compliance before any action is permitted.
 
 This specification addresses the core gap in modern data governance: obligations are documented in policy platforms and systems of record, but are not consistently enforced at the point of execution. PCT bridges that gap by making obligations machine-readable, portable, tamper-evident, and verifiable in real time.
 
@@ -114,7 +114,7 @@ The result is that compliance, for most organisations, exists in documents and d
 
 ### 1.2 The core concept
 
-The Privacy Claims Token takes its conceptual model from JSON Web Tokens (JWTs), the standard mechanism for portable, signed identity claims in authentication systems. A JWT carries structured claims about a user — who they are, what they are permitted to do — and those claims travel with the user's session. Any system that receives the token can verify its authenticity and act on its claims without calling back to a central authority.
+The Proof Claims Token takes its conceptual model from JSON Web Tokens (JWTs), the standard mechanism for portable, signed identity claims in authentication systems. A JWT carries structured claims about a user — who they are, what they are permitted to do — and those claims travel with the user's session. Any system that receives the token can verify its authenticity and act on its claims without calling back to a central authority.
 
 PCT applies the same model to data rather than users. When a dataset is created, ingested, or enters a processing pipeline, a PCT is issued that encodes the obligations attached to that data: its jurisdiction of origin, the purposes for which it may be used, the lawful basis under which it was collected, consent status, transfer restrictions, and so forth. Those claims are cryptographically signed. Wherever the data travels, the PCT travels with it. Before any action — a processing operation, an AI model call, a cross-border transfer — the PCT is verified. If the claimed obligations permit the action, it proceeds. If not, it is blocked. In either case, a tamper-evident audit record is generated automatically.
 
@@ -144,7 +144,7 @@ The following terms are used throughout this specification. Where a term has an 
 
 | Term | Definition |
 |------|------------|
-| **PCT** | Privacy Claims Token. A structured, signed object encoding the data obligations attached to a specific dataset or data flow. |
+| **PCT** | Proof Claims Token. A structured, signed object encoding the data obligations attached to a specific dataset or data flow. |
 | **Claim** | A discrete, structured assertion within a PCT about a specific obligation or constraint governing the data. Analogous to a claim in the JWT specification (RFC 7519). |
 | **Issuer** | The entity responsible for generating and signing a PCT. The issuer attests to the accuracy of the claims at the time of issuance. |
 | **Subject** | The dataset, data flow, or processing operation to which the PCT is attached. |
@@ -165,7 +165,7 @@ The following terms are used throughout this specification. Where a term has an 
 
 ### 3.1 What PCT governs
 
-This specification governs the format, content, signing, verification, and audit of Privacy Claims Tokens. It applies to any processing operation, data transfer, or AI model interaction where a participating system chooses to implement PCT-based enforcement.
+This specification governs the format, content, signing, verification, and audit of Proof Claims Tokens. It applies to any processing operation, data transfer, or AI model interaction where a participating system chooses to implement PCT-based enforcement.
 
 PCT is applicable to, but not limited to, the following scenarios:
 
@@ -911,7 +911,7 @@ The following JSON Schema (Draft 2020-12) defines the complete structure of a PC
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://pct.opsf.org/schema/0.1/pct.json",
-  "title": "Privacy Claims Token",
+  "title": "Proof Claims Token",
   "type": "object",
   "required": [
     "pct_id", "issued_at", "valid_from", "expires_at",
@@ -1015,4 +1015,4 @@ Comments, corrections, and proposed extensions for version 0.2 should be submitt
 
 ---
 
-*Privacy Claims Token Specification v0.1 · Released under CC BY 4.0 · OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)*
+*Proof Claims Token Specification v0.1 · Released under CC BY 4.0 · OPSF (Open Privacy Standards Foundation) · [opsf.org](https://opsf.org)*

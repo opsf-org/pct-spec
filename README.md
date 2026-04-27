@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Privacy Claims Token — An open standard for portable, cryptographically signed data obligation tokens." width="100%">
+  <img src="assets/banner.png" alt="Proof Claims Token — An open standard for portable, cryptographically signed data obligation tokens." width="100%">
 </p>
 
-# Privacy Claims Token (PCT) — Open Specification
+# Proof Claims Token (PCT) — Open Specification
 
 **Version 0.1 · Draft for Public Comment · March 2026**
 
@@ -12,9 +12,9 @@
 
 ---
 
-## What is the Privacy Claims Token?
+## What is the Proof Claims Token?
 
-The **Privacy Claims Token (PCT)** is an open, portable format for expressing, signing, and verifying the data obligations that govern how a dataset may be lawfully processed, transferred, or used.
+The **Proof Claims Token (PCT)** is an open, portable format for expressing, signing, and verifying the data obligations that govern how a dataset may be lawfully processed, transferred, or used.
 
 A PCT is a structured, cryptographically signed object — inspired by the JSON Web Token (JWT) model — that **travels with data** through systems and pipelines. Any participating system can verify compliance before any action is permitted.
 
@@ -160,4 +160,4 @@ Anyone may implement, extend, or build upon it freely, provided attribution is g
 
 ---
 
-*Privacy Claims Token Specification v0.1 · March 2026*
+*Proof Claims Token Specification v0.1 · March 2026*
