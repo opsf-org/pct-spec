@@ -1,6 +1,6 @@
 # Contributing to the PCT Specification
 
-Thank you for your interest in contributing to the Privacy Claims Token (PCT) specification. Version 0.1 is a draft for public comment, and contributions of all kinds are actively welcomed.
+Thank you for your interest in contributing to the Proof Claims Token (PCT) specification. Version 0.1 is a draft for public comment, and contributions of all kinds are actively welcomed.
 
 ---
 

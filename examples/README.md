@@ -1,6 +1,6 @@
 # PCT Example Tokens and Scenarios
 
-This directory contains example Privacy Claims Token payloads and verification scenarios for reference and testing.
+This directory contains example Proof Claims Token payloads and verification scenarios for reference and testing.
 
 ---
 
